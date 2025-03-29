@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main_div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+}
+.inner_main_div{
+    background-color: red;
+    width: 50%;
+  height: 50%;
+}
+.left_content{
+    background-color: blue;
+    width: 50%;
+    float: left;
+}
+.right_content{
+    background-color: aqua;
+
+}
+
+  
