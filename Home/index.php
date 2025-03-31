@@ -41,16 +41,46 @@ background-repeat: no-repeat;
 
 
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200"><path fill="#fff" fill-opacity="1" d="M0,160L21.8,154.7C43.6,149,87,139,131,122.7C174.5,107,218,85,262,101.3C305.5,117,349,171,393,176C436.4,181,480,139,524,133.3C567.3,128,611,160,655,165.3C698.2,171,742,149,785,122.7C829.1,96,873,64,916,53.3C960,43,1004,53,1047,85.3C1090.9,117,1135,171,1178,181.3C1221.8,192,1265,160,1309,144C1352.7,128,1396,128,1418,128L1440,128L1440,320L1418.2,320C1396.4,320,1353,320,1309,320C1265.5,320,1222,320,1178,320C1134.5,320,1091,320,1047,320C1003.6,320,960,320,916,320C872.7,320,829,320,785,320C741.8,320,698,320,655,320C610.9,320,567,320,524,320C480,320,436,320,393,320C349.1,320,305,320,262,320C218.2,320,175,320,131,320C87.3,320,44,320,22,320L0,320Z"></path></svg>
     </div>
     <div class="container">
-
         <div class="main_section_part">
             <h1 style="text-align: center;padding:30px;">Meet Our Team</h1>
             <div class="parent">
-<div class="div1"> 1</div>
-<div class="div2"> 2</div>
-<div class="div3"> 3</div>
-</div>
+                <div class="div1">
+                    <div class="card_header">
+                        <img src="../assets//logo.png" alt="">
+                    </div>
+                    <div class="card_body">
+                        <h1>Rohit Singh</h1> <br>
+                        <p>Lorem ipsum dolor sit amet . Inventore maxime, ex autem totam sequi sint recusandae veniam excepturi animi? Quod voluptates corrupti minima velit porro accusamus, numquam deleniti ducimus eius et repellendus nulla, a ad cum labore soluta id est?
+
+                        </p>
+                    </div>
+                </div>
+                <div class="div2">
+                    <div class="card_header">
+                        <img src="../assets//logo.png" alt="">
+                    </div>
+                    <div class="card_body">
+                    <h1>Ankita Pokhrel</h1> <br>
+                        <p>Lorem ipsum dolor sit amet . Inventore maxime, ex autem totam sequi sint recusandae veniam excepturi animi? Quod voluptates corrupti minima velit porro accusamus, numquam deleniti ducimus eius et repellendus nulla, a ad cum labore soluta id est?
+
+                        </p>
+                    </div>
+                </div>
+                <div class="div3">
+                    <div class="card_header">
+                        <img src="../assets//logo.png" alt="">
+                    </div>
+                    <div class="card_body">
+                    <h1>Bhimsen Parajuli </h1> <br>
+                        <p>Lorem ipsum dolor sit amet . Inventore maxime, ex autem totam sequi sint recusandae veniam excepturi animi? Quod voluptates corrupti minima velit porro accusamus, numquam deleniti ducimus eius et repellendus nulla, a ad cum labore soluta id est?
+
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
