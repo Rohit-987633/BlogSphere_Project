@@ -7,7 +7,10 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #5065bf;
+    background-image: url(../assets/loginback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 .container {
     margin-left: 100px;
@@ -51,7 +54,7 @@ nav img {
     background-color: rgb(2, 30, 122);
     color: white;
     transition: 0.3s ease-in-out;
-    padding: 13px;
+    /* padding: 13px; */
     border-radius: 20px;
 }
 /* ///////////////////////////////////////////NAVBAR/////////////////////////////////////////// */
@@ -64,7 +67,8 @@ nav img {
 }
 
 .login-card {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.644); 
+    /* background-color: rgb(230, 233, 235); */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);

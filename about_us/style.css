@@ -5,12 +5,13 @@
     
 }
 
+
   .container {
     margin-left: 100px;
     margin-right: 100px;
     
   }
- 
+  
   
   /* ///////////////////////////////////////////NAVBAR/////////////////////////////////////////// */
 
@@ -54,8 +55,17 @@
   
   /* ///////////////////////////////////////////FIRST_PART/////////////////////////////////////////// */
  
+  .about_us_div{
+    display: flex;
+  }
+  .our_mission{
+    background-color: white;
+  }
   .content_box {
     padding: 40px 0;
+  }
+  .mission_content{
+    padding: 20px;
   }
   
   .main-heading {
