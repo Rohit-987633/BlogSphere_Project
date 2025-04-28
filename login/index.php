@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
 <div class="container">
-    <nav>
+    <nav style="color: white;">
         <img src="../assets/logo.png" alt="">
         <a> <button class="nav_btn"><b>Login</b></button></a>
         <a class="nav_link">Contact</a>
