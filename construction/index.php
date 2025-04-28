@@ -5,25 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Dashboard</title>
+    <title>Construction</title>
 </head>
 
-<body>
-    <div class="dashboard">
+<body >
+    <div class="dashboard" style="overflow: hidden;"> 
 
 
         <div class="dashboard_sidebar">
 
-            <div class="top_item" style="display: flex;padding:10px">
+        <div class="top_item" style="display: flex;padding:10px">
 
                 <img src="../assets///logo.png" alt="">
                 <h2 style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
-            <hr >
+            <hr>
             <!-- <div class="side_item_list"> <img src="../assets//adminlogo.png" alt="">
-                <p class="side_items">Rohit Singh</p>   
-            </div> -->
+                <p class="side_items">Rohit Singh</p>
+            </div><br> -->
             <a class="side_items_anchor" href="../dashboard/index.php">
                 <img src="../assets/home_icon.png" alt="">
                 <p class="side_items">Dashboard</p>
@@ -52,9 +52,9 @@
 
         </div>
 
-        <div class="center_content">
+        <div class="center_content" >
 
-            <div class="topbar">
+        <div class="topbar">
                 <h3>Admin Dashboard</h3>
                 <div class="topbar_info">
                     <img src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
@@ -63,48 +63,10 @@
                 </div>
             </div>
 
-            <div class="content">
-                <h2 style="padding: 15px;"> </h2>
-                <div class="card">
-                    <div class="card_header">
-                        <img src="../assets/blog.png" alt="">
-                    </div>
-                    <div class="card_body">
-                        <h1>4,000</h1>
-                        <h2 style="color: gray;">Total Blogs</h2>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card_header">
-                    <img src="../assets/like2.png" alt="">
-                </div>
-                <div class="card_body">
-                        <h1>No. of Like</h1>
-                        <h1>2,000</h1>
-                        <p>Number of like you got.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card_header">
-                        <h1>No. of Share</h1>
-                    </div>
-                    <div class="card_body">
-                        <h1>800</h1>
-                        <p>Number of share of article </p>
-                    </div>
-                </div>
-
-                <div class="chart_content">
-                    <div class="image_content_dashboard">
-                        <img class="barchart" src="../assets/bar_new.png" alt="">
-                        <img class="piechart" src="../assets/pie_new.png" alt="">
-                    </div>
-                    <h2>Chart Content</h2>
-                </div>
-
-
+            <div class="content" style="overflow:hidden">
+                
+            <img style="width: 100%;height:100vh;" src="../assets//construction.jpg" alt="">
             </div>
-
         </div>
     </div>
 </body>
