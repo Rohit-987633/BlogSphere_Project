@@ -10,7 +10,8 @@ body {
     background-image: url(../assets/loginback.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    
+    overflow: auto; 
 }
 .container {
     margin-left: 100px;
@@ -54,7 +55,6 @@ nav img {
     background-color: rgb(2, 30, 122);
     color: white;
     transition: 0.3s ease-in-out;
-    /* padding: 13px; */
     border-radius: 20px;
 }
 /* ///////////////////////////////////////////NAVBAR/////////////////////////////////////////// */
@@ -84,8 +84,8 @@ nav img {
 .logo {
     display: block;
     margin: 0 auto;
-    width: 80px; /* Adjust size based on your logo */
-    height: 80px; /* Adjust size based on your logo */
+    width: 80px; 
+    height: 80px;
 }
 
 label {
@@ -94,7 +94,7 @@ label {
     display: block;
 }
 
-input[type="email"], input[type="password"], input[type="name"] {
+input[type="email"], input[type="password"], input[type="text"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;

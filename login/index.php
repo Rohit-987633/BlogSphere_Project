@@ -2,16 +2,15 @@
 <?php
 session_start();
 
-// Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Sample credentials (replace with database check in production)
+    // credentials 
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Simple validation (Replace this with actual database validation)
+    // validation 
     if ($email == "admin@example.com" && $password == "password123") {
-        $_SESSION['user'] = $email;  // Store user session
-        header('Location: dashboard.php');  // Redirect to dashboard or home page
+        $_SESSION['user'] = $email;  
+        header('Location: dashboard.php');  
         exit;
     } else {
         $error_message = "Invalid Credentials!";
@@ -25,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - BlogSphere</title>
-    <link rel="stylesheet" href="style.css"> <!-- Ensure this is linked correctly -->
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 <div class="container">
@@ -41,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <div class="login-container">
     <div class="login-card">
         <!-- Logo Section -->
-        <img src="../assets/logo.png" alt="Logo" class="logo"> <!-- Ensure the logo image path is correct -->
+        <img src="../assets/logo.png" alt="Logo" class="logo"> 
 
         <h2>Login</h2>
 
@@ -66,6 +65,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </p>
     </div>
 </div>
+<script>
+function validateForm() {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const errorMessage = document.createElement('p');
+    errorMessage.style.color = 'red';
 
+    
+    if (email === '') {
+        errorMessage.textContent = 'Email is required.';
+        document.querySelector('.login-card').appendChild(errorMessage);
+        return false;
+    }
+
+   
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        errorMessage.textContent = 'Please enter a valid email address.';
+        document.querySelector('.login-card').appendChild(errorMessage);
+        return false;
+    }
+
+    
+    if (password === '') {
+        errorMessage.textContent = 'Password is required.';
+        document.querySelector('.login-card').appendChild(errorMessage);
+        return false;
+    }
+
+    
+    if (password.length < 6) {
+        errorMessage.textContent = 'Password must be at least 6 characters long.';
+        document.querySelector('.login-card').appendChild(errorMessage);
+        return false;
+    }
+
+    
+    return true;
+}
+</script>
 </body>
 </html>

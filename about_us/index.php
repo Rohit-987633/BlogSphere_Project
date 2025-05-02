@@ -32,7 +32,7 @@
                 <h1 class="main-heading" style="text-align: center;">About Us</h1>
                 <div class="about_us_div">
                     <div class="image_about_us">
-                        <img src="../assets/logo.png" alt="">
+                        <img src="../assets/about.jpg" alt="">
                     </div>
                     <p class="description">
                         Welcome to <strong>BlogSphere</strong> — your one-stop destination for reading, sharing, and exploring a world of diverse blogs! Whether you’re an avid reader or an aspiring writer, we’ve created a space where ideas flow freely, and knowledge is shared across a wide range of topics.</p>
