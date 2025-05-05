@@ -55,7 +55,9 @@ background-repeat: no-repeat;
                     <img src="../assets///blog4.jpg" alt="">
                 </div>
                 <div class="home_right_part_blog">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil autem officia id officiis corporis nostrum, eaque architecto eum, quas doloremque cumque inventore, in aut sequi incidunt culpa repudiandae repellat debitis commodi illum blanditiis minima. Officia ab voluptatibus quos est autem nam necessitatibus magnam id facilis laboriosam, illum nisi vitae, soluta quod inventore dolore? Ducimus et beatae veritatis harum perferendis. Sunt sapiente obcaecati minima. In delectus aperiam illum vitae. Fugiat, suscipit.</h2>
+                    <h2>The Last Party by Clare Mackintosh is a gripping crime thriller set in a small Welsh town. During a glitzy New Year's Eve party at a lakeside resort, a wealthy guest, Rhys Lloyd, is found dead. Ffion Morgan, a local detective, investigates as secrets, betrayals, and tensions between the locals and outsiders unravel. As the story shifts between timelines and perspectives, shocking truths emerge about Rhys and the community. It's a suspenseful, character-driven mystery about revenge, hidden pasts, and justice.
+
+</h2>
                 </div>
             </div>
 
@@ -65,7 +67,9 @@ background-repeat: no-repeat;
                     <img src="../assets///blog2.jpg" alt="">
                 </div>
                 <div class="home_right_part_blog">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil autem officia id officiis corporis nostrum, eaque architecto eum, quas doloremque cumque inventore, in aut sequi incidunt culpa repudiandae repellat debitis commodi illum blanditiis minima. Officia ab voluptatibus quos est autem nam necessitatibus magnam id facilis laboriosam, illum nisi vitae, soluta quod inventore dolore? Ducimus et beatae veritatis harum perferendis. Sunt sapiente obcaecati minima. In delectus aperiam illum vitae. Fugiat, suscipit.</h2>
+                    <h2>Dark at the Crossing by Elliot Ackerman is a powerful novel set on the Turkish-Syrian border. It follows Haris Abadi, an Arab-American who once served the U.S. military and now seeks redemption by joining the Syrian rebels. After a failed border crossing, he meets Amir and Daphne, a couple torn by war and loss. As Haris gets drawn into their complicated lives, he confronts loyalty, identity, and the heavy cost of conflict. The story explores exile, belonging, and the meaning of home.
+
+</h2>
                 </div>
             </div>
 
@@ -76,7 +80,9 @@ background-repeat: no-repeat;
                     <img src="../assets///blog3.jpg" alt="">
                 </div>
                 <div class="home_right_part_blog">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil autem officia id officiis corporis nostrum, eaque architecto eum, quas doloremque cumque inventore, in aut sequi incidunt culpa repudiandae repellat debitis commodi illum blanditiis minima. Officia ab voluptatibus quos est autem nam necessitatibus magnam id facilis laboriosam, illum nisi vitae, soluta quod inventore dolore? Ducimus et beatae veritatis harum perferendis. Sunt sapiente obcaecati minima. In delectus aperiam illum vitae. Fugiat, suscipit.</h2>
+                    <h2>Hostage by Clare Mackintosh is a tense psychological thriller set on a long-haul flight from London to Sydney. Flight attendant Mina is forced to make an impossible choice when hijackers threaten her daughter's life unless she helps them. As tensions rise onboard, secrets about passengers and crew emerge. The novel explores sacrifice, loyalty, and survival under extreme pressure, leading to a gripping, emotional climax.
+
+</h2>
                 </div>
             </div>
 
@@ -90,34 +96,31 @@ background-repeat: no-repeat;
             <div class="parent">
                 <div class="div1">
                     <div class="card_header">
-                        <img src="../assets//logo.png" alt="">
+                        <img src="../assets//user2.png" alt="">
                     </div>
                     <div class="card_body">
                         <h1>Rohit Singh</h1> <br>
-                        <p>Lorem ipsum dolor sit amet . Inventore maxime, ex autem totam sequi sint recusandae veniam excepturi animi? Quod voluptates corrupti minima velit porro accusamus, numquam deleniti ducimus eius et repellendus nulla, a ad cum labore soluta id est?
-
+                        <p>This website is a fantastic platform for sharing insightful articles and blogs. It's user-friendly, well-organized  with valuable content that inspires, informs, and connects readers worldwide.
                         </p>
                     </div>
                 </div>
                 <div class="div2">
                     <div class="card_header">
-                        <img src="../assets//logo.png" alt="">
+                        <img src="../assets//user1.png" alt="">
                     </div>
                     <div class="card_body">
                         <h1>Ankita Pokhrel</h1> <br>
-                        <p>Lorem ipsum dolor sit amet . Inventore maxime, ex autem totam sequi sint recusandae veniam excepturi animi? Quod voluptates corrupti minima velit porro accusamus, numquam deleniti ducimus eius et repellendus nulla, a ad cum labore soluta id est?
-
+                        <p>An excellent website for discovering and sharing thoughtful blogs and articles. The content is diverse, engaging, and easy to access, making it a go-to destination for curious and passionate readers.
                         </p>
                     </div>
                 </div>
                 <div class="div3">
                     <div class="card_header">
-                        <img src="../assets//logo.png" alt="">
+                        <img src="../assets//user3.webp" alt="">
                     </div>
                     <div class="card_body">
                         <h1>Bhimsen Parajuli </h1> <br>
-                        <p>Lorem ipsum dolor sit amet . Inventore maxime, ex autem totam sequi sint recusandae veniam excepturi animi? Quod voluptates corrupti minima velit porro accusamus, numquam deleniti ducimus eius et repellendus nulla, a ad cum labore soluta id est?
-
+                        <p>A great platform for sharing and exploring blogs and articles. The website is easy to navigate, offers fresh and inspiring content, and creates a vibrant community of writers and readers.
                         </p>
                     </div>
                 </div>
@@ -127,14 +130,14 @@ background-repeat: no-repeat;
     <footer class="foot_home">
         <di v class="container">
             <div class="subscribe_part">
-                <input type="email" name="" id="">
+                <input type="email" name="" id="" placeholder="Enter E-mail">
                 <button class="subscribe_part_btn">Submit</button>
             </div>
             <div class="social_media">
-                <img class="social_media_img" src="../assets//logo.png" alt="">
-                <img class="social_media_img" src="../assets//logo.png" alt="">
-                <img class="social_media_img" src="../assets//logo.png" alt="">
-                <img class="social_media_img" src="../assets//logo.png" alt="">
+              <a class="social_media_link" href="https://www.facebook.com">  <img class="social_media_img" src="../assets//fb.webp" alt=""></a>
+              <a class="social_media_link" href="https://www.instagram.com">  <img class="social_media_img" src="../assets//insta.png" alt=""></a>
+              <a class="social_media_link" href="https://www.whatsapp.com">  <img class="social_media_img" src="../assets//whats1.png" alt=""></a>
+              <a class="social_media_link" href="https://www.linkedin.com">  <img class="social_media_img" src="../assets//link.webp" alt=""></a>
             </div>
             <p style="text-align: center;color:#6d6969;padding:20px ">Copyright © 2025 Nepal Tech. All Rights Reserved.</p>
             </div>

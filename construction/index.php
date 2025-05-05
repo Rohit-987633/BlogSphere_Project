@@ -63,9 +63,9 @@
                 </div>
             </div>
 
-            <div class="content" style="overflow:hidden">
+            <div class="content" style="overflow:hidden" >
                 
-            <img style="width: 100%;height:100vh;" src="../assets//construction.jpg" alt="">
+            <!-- <img style="background-size: contain;" src="../assets//construction3.jpg" alt=""> -->
             </div>
         </div>
     </div>
