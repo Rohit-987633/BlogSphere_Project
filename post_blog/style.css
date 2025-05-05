@@ -112,6 +112,11 @@ width: 50px;
     right: 1%;
     top: 20px;
   }
+  .user_logo{
+    width: 40px !important;
+    height: 10% !important ;
+    margin-top: 4px;
+  }
   .topbar_info p{
     margin-top: 10%;
     margin-left: 10px;

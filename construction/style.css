@@ -61,7 +61,11 @@ border-radius: 50px;
   .topbar h3{
     margin-left: 20px;
   }
-
+  .user_logo{
+    width: 40px !important;
+    height: 10% !important ;
+    margin-top: 4px;
+  }
 .content {
   background-image: url(../assets/construction1.jpg);
   background-size: cover;

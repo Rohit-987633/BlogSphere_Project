@@ -57,7 +57,7 @@
             <div class="topbar">
                 <h3>Admin Dashboard</h3>
                 <div class="topbar_info">
-                    <img src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
+                    <img class="user_logo" src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
                     <p>Rohit Singh</p>
                     <a href="../Home/index.php"><img src="../assets///back.png" alt="" class="logout_btn"></a>
                 </div>
@@ -97,7 +97,8 @@
                     <div class="image_content_dashboard">
                         <img class="barchart" src="../assets/bar_new.png" alt="">
                         <img class="piechart" src="../assets/pie_new.png" alt="">
-                    </div>
+                    </div> 
+                    <br><br>
                     <h2>Chart Content</h2>
                 </div>
 
