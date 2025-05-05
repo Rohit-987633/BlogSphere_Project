@@ -57,9 +57,9 @@
         <div class="topbar">
                 <h3>Admin Dashboard</h3>
                 <div class="topbar_info">
-                    <img src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
+                    <img class="user_logo" src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
                     <p>Rohit Singh</p>
-                    <img src="../assets///back.png" alt="" class="logout_btn">
+                    <a href="../Home/index.php"><img src="../assets///back.png" alt="" class="logout_btn"></a>
                 </div>
             </div>
 
