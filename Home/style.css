@@ -166,9 +166,13 @@ color: white;
   display: flex;
   justify-content: center;
 }
-.social_media_img{
+.social_media_link{
   margin: 20px;
   margin-top: 2%;
+}
+.social_media_img{
+  /* margin: 20px;
+  margin-top: 2%; */
   display: flex;
   justify-content: center;
   justify-items: center;

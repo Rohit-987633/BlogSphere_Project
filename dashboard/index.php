@@ -59,7 +59,7 @@
                 <div class="topbar_info">
                     <img src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
                     <p>Rohit Singh</p>
-                    <img src="../assets///back.png" alt="" class="logout_btn">
+                    <a href="../Home/index.php"><img src="../assets///back.png" alt="" class="logout_btn"></a>
                 </div>
             </div>
 
@@ -76,21 +76,20 @@
                 </div>
                 <div class="card">
                     <div class="card_header">
-                    <img src="../assets/like2.png" alt="">
+                    <img src="../assets/likemain.png" alt="" style="width: 70px;height: 35%;">
                 </div>
                 <div class="card_body">
-                        <h1>No. of Like</h1>
-                        <h1>2,000</h1>
-                        <p>Number of like you got.</p>
+                <h1>200</h1>
+                <h2 style="color: gray;">Total Likes</h2>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card_header">
-                        <h1>No. of Share</h1>
+                    <img src="../assets/share2.png" alt="" style="width: 70px;height: 30%;">
                     </div>
                     <div class="card_body">
-                        <h1>800</h1>
-                        <p>Number of share of article </p>
+                    <h1>78</h1>
+                    <h2 style="color: gray;">Total Share</h2>
                     </div>
                 </div>
 

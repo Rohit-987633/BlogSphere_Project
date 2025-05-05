@@ -92,6 +92,20 @@
                     <tr>
                         <td>Description</td    >
                         <td> <textarea name="" rows="3" cols="21" id=""></textarea></td>
+                        <td >Category</td>
+                        <td> 
+                            <select name="" id="" style="padding: 10px;width:100%;cursor:pointer">
+                                <option value="technology">Technology</option>
+                                <option value="business">Business</option>
+                                <option value="law">Law</option>
+                                <option value="sport">Sports</option>
+                                <option value="game">Game</option>
+
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>Image</td>
                         <td>
                         <input type="file" id="imageUpload" name="imageUpload" accept="image/png, image/jpeg"></td>
