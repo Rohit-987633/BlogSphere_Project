@@ -37,6 +37,8 @@ nav img {
 }
 .nav_btn {
     text-decoration: none;
+    background-color: white;
+    color:black;
     float: right; 
     padding: 13px;
     width: 100px;
@@ -94,7 +96,7 @@ label {
     display: block;
 }
 
-input[type="email"], input[type="password"], input[type="text"] {
+input[type="email"], input[type="username"], input[type="password"], input[type="text"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
