@@ -20,7 +20,6 @@
                 <h2 style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
-            <hr>
             <!-- <div class="side_item_list"> <img src="../assets//adminlogo.png" alt="">
                 <p class="side_items">Rohit Singh</p>
             </div><br> -->

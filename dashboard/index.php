@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['is_valid_user'] = true;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +24,6 @@
                 <h2 style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
-            <hr >
             <!-- <div class="side_item_list"> <img src="../assets//adminlogo.png" alt="">
                 <p class="side_items">Rohit Singh</p>   
             </div> -->
@@ -59,7 +62,7 @@
                 <div class="topbar_info">
                     <img class="user_logo" src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
                     <p>Rohit Singh</p>
-                    <a href="../Home/index.php"><img src="../assets///back.png" alt="" class="logout_btn"></a>
+                    <a href="../php/logout.php"><img src="../assets///back.png" alt="" class="logout_btn"></a>
                 </div>
             </div>
 
@@ -70,16 +73,26 @@
                         <img src="../assets/blog.png" alt="">
                     </div>
                     <div class="card_body">
-                        <h1>4,000</h1>
+                        <h2 class="header_card">4,000</h2>
                         <h2 style="color: gray;">Total Blogs</h2>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card_header">
+                        <img src="../assets/blog.png" alt="">
+                    </div>
+                    <div class="card_body">
+                        <h2 class="header_card">4,000</h2>
+                        <h2 style="color: gray;">Total Blogs</h2>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card_header">
                     <img src="../assets/likemain.png" alt="" style="width: 70px;height: 35%;">
                 </div>
                 <div class="card_body">
-                <h1>200</h1>
+                <h2 class="header_card">200</h2>
                 <h2 style="color: gray;">Total Likes</h2>
                     </div>
                 </div>
@@ -88,22 +101,32 @@
                     <img src="../assets/share2.png" alt="" style="width: 70px;height: 30%;">
                     </div>
                     <div class="card_body">
-                    <h1>78</h1>
+                    <h2 class="header_card">78</h2>
                     <h2 style="color: gray;">Total Share</h2>
                     </div>
                 </div>
 
                 <div class="chart_content">
                     <div class="image_content_dashboard">
-                        <img class="barchart" src="../assets/bar_new.png" alt="">
-                        <img class="piechart" src="../assets/pie_new.png" alt="">
+      <div class="test" style="background-color: white;padding:15px;border-radius:20px">                  
+                            <h2 style="text-align: center;">Barchart</h2>
+                            <img class="barchart" src="../assets/bar_new.png" alt="" >
+</div>
+<div class="test" style="background-color: white;padding:15px;margin-left:45px;border-radius:20px">                  
+                            <h2 style="text-align: center;">Piechart</h2>
+                            <img class="piechart" src="../assets/pie_new.png" alt="">
+</div>
+      
                     </div> 
+
+                    
                     <br><br>
-                    <h2>Chart Content</h2>
+                    <h2>Diagrams</h2>
                 </div>
-
-
+                
             </div>
+
+            
 
         </div>
     </div>

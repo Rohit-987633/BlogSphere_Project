@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +18,10 @@ background-repeat: no-repeat;
         <div class="container">
             <nav>
                 <img src="../assets/logo.png" alt="">
-                <a> <button class="nav_btn"><b>Login</b></button></a>
-                <a class="nav_link">Contact</a>
-                <a class="nav_link">Article</a>
-                <a class="nav_link">About</a>
+                <a href="../login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
+                <a href="../contact/index.php" class="nav_link">Contact</a>
+                <a href="../service/index.php" class="nav_link">Article</a>
+                <a href="../about_us/index.php" class="nav_link">About</a>
                 <a class="nav_link">Home</a>
             </nav>
 
@@ -57,7 +58,7 @@ background-repeat: no-repeat;
                 <div class="home_right_part_blog">
                     <h2>The Last Party by Clare Mackintosh is a gripping crime thriller set in a small Welsh town. During a glitzy New Year's Eve party at a lakeside resort, a wealthy guest, Rhys Lloyd, is found dead. Ffion Morgan, a local detective, investigates as secrets, betrayals, and tensions between the locals and outsiders unravel. As the story shifts between timelines and perspectives, shocking truths emerge about Rhys and the community. It's a suspenseful, character-driven mystery about revenge, hidden pasts, and justice.
 
-</h2>
+                    </h2>
                 </div>
             </div>
 
@@ -69,7 +70,7 @@ background-repeat: no-repeat;
                 <div class="home_right_part_blog">
                     <h2>Dark at the Crossing by Elliot Ackerman is a powerful novel set on the Turkish-Syrian border. It follows Haris Abadi, an Arab-American who once served the U.S. military and now seeks redemption by joining the Syrian rebels. After a failed border crossing, he meets Amir and Daphne, a couple torn by war and loss. As Haris gets drawn into their complicated lives, he confronts loyalty, identity, and the heavy cost of conflict. The story explores exile, belonging, and the meaning of home.
 
-</h2>
+                    </h2>
                 </div>
             </div>
 
@@ -82,7 +83,7 @@ background-repeat: no-repeat;
                 <div class="home_right_part_blog">
                     <h2>Hostage by Clare Mackintosh is a tense psychological thriller set on a long-haul flight from London to Sydney. Flight attendant Mina is forced to make an impossible choice when hijackers threaten her daughter's life unless she helps them. As tensions rise onboard, secrets about passengers and crew emerge. The novel explores sacrifice, loyalty, and survival under extreme pressure, leading to a gripping, emotional climax.
 
-</h2>
+                    </h2>
                 </div>
             </div>
 
@@ -100,7 +101,7 @@ background-repeat: no-repeat;
                     </div>
                     <div class="card_body">
                         <h1>Rohit Singh</h1> <br>
-                        <p>This website is a fantastic platform for sharing insightful articles and blogs. It's user-friendly, well-organized  with valuable content that inspires, informs, and connects readers worldwide.
+                        <p>This website is a fantastic platform for sharing insightful articles and blogs. It's user-friendly, well-organized with valuable content that inspires, informs, and connects readers worldwide.
                         </p>
                     </div>
                 </div>
@@ -128,19 +129,19 @@ background-repeat: no-repeat;
         </div>
     </div>
     <footer class="foot_home">
-        <di v class="container">
+        <div class="container">
             <div class="subscribe_part">
                 <input type="email" name="" id="" placeholder="Enter E-mail">
                 <button class="subscribe_part_btn">Submit</button>
             </div>
             <div class="social_media">
-              <a class="social_media_link" href="https://www.facebook.com">  <img class="social_media_img" src="../assets//fb.webp" alt=""></a>
-              <a class="social_media_link" href="https://www.instagram.com">  <img class="social_media_img" src="../assets//insta.png" alt=""></a>
-              <a class="social_media_link" href="https://www.whatsapp.com">  <img class="social_media_img" src="../assets//whats1.png" alt=""></a>
-              <a class="social_media_link" href="https://www.linkedin.com">  <img class="social_media_img" src="../assets//link.webp" alt=""></a>
+                <a class="social_media_link" href="https://www.facebook.com"> <img class="social_media_img" src="../assets//fb.webp" alt=""></a>
+                <a class="social_media_link" href="https://www.instagram.com"> <img class="social_media_img" src="../assets//insta.png" alt=""></a>
+                <a class="social_media_link" href="https://www.whatsapp.com"> <img class="social_media_img" src="../assets//whats1.png" alt=""></a>
+                <a class="social_media_link" href="https://www.linkedin.com"> <img class="social_media_img" src="../assets//link.webp" alt=""></a>
             </div>
             <p style="text-align: center;color:#6d6969;padding:20px ">Copyright © 2025 Nepal Tech. All Rights Reserved.</p>
-            </div>
+        </div>
     </footer>
 </body>
 
