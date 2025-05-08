@@ -28,7 +28,6 @@ session_start();
                 <h2 style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
-            <hr>
             <a class="side_items_anchor" href="../dashboard/index.php">
                 <img src="../assets/home_icon.png" alt="">
                 <p class="side_items">Dashboard</p>
@@ -67,10 +66,12 @@ session_start();
             </div>
 
             <div class="content">
+                
                 <div class="submission_form">
-                    <h1>
+                    <h1 style="text-align: center;">
                         Post A Blog
-                    </h1> <br>
+                    </h1> <br> <br>
+                    
                     <form action="../php/postArticle.php" , method="POST">
                         <table class="post_table">
                             <tr>
@@ -80,8 +81,11 @@ session_start();
                                 <td> <input required type="text" name="subtitle" id=""></td>
                             </tr>
                             <tr>
-                                <td>Description</td>
-                                <td> <textarea name="description" rows="3" cols="21" id="" required></textarea></td>
+                            <td>Image</td>
+                                <td>
+                                    <input type="file" id="imageUpload" name="image" accept="image/png, image/jpeg" required>
+                                </td>
+
                                 <td>Category</td>
                                 <td>
                                     <select name="categories" style="padding: 10px;width:100%;cursor:pointer" required>
@@ -97,10 +101,10 @@ session_start();
                                 </td>
                             </tr>
                             <tr>
-                                <td>Image</td>
-                                <td>
-                                    <input type="file" id="imageUpload" name="image" accept="image/png, image/jpeg" required>
-                                </td>
+ 
+                                <td>Description</td>
+                                <td colspan="40"> <textarea  name="description" rows="12" cols="85" id="" required></textarea></td>
+ 
                             </tr>
                             <td>
 
@@ -113,10 +117,11 @@ session_start();
                                 ?>
                             </td>
                             <tr>
-                                <td><button type="submit">Submit</button></td>
+                            <td><button  type="submit">Submit</button></td>
                             </tr>
                         </table>
                     </form>
+                    
                 </div>
             </div>
 

@@ -3,15 +3,13 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // credentials 
+    echo":::::::";
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // validation 
     if ($email == "admin@example.com" && $password == "password123") {
+        header("Location: ../Home/index.php");  
         $_SESSION['user'] = $email;  
-        header('Location: dashboard.php');  
-        exit;
     } else {
         $error_message = "Invalid Credentials!";
     }

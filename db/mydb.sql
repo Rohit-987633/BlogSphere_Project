@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS Blogsphere;
+CREATE DATABASE IF NOT EXISTS Blogspheres;
 
-USE Blogsphere;
+USE Blogspheres;
 
 CREATE TABLE login(
     id int PRIMARY KEY AUTO_INCREMENT NOT Null,
@@ -8,7 +8,7 @@ CREATE TABLE login(
     password varchar(255) NOT null
 );
 
-Insert into login VALUES ('test@gmail.com',SHA2('test',256));
+Insert into login VALUES (1,'test@gmail.com',SHA2('test',256));
 
 Create TABLE sign_up(
     id int PRIMARY KEY AUTO_INCREMENT NOT null,
