@@ -67,46 +67,35 @@ session_start();
             </div>
 
             <div class="content">
-                
+
                 <div class="submission_form">
-                    <h2 style="text-align: center;background-image:url('../assets/purple.png ');padding:10px">
-                        Post A Blog
-                    </h2> <br> <br>
-                    
-                    <form action="../php/postArticle.php" , method="POST" class="mod_form">
+                    <h2 style="text-align: center;background-image:url('../assets/purple.png');padding:10px">
+                        Update Profile
+                    </h2> 
+                    <form action="../php/updateUser.php" , method="POST" class="mod_form">
                         <table class="post_table">
                             <tr>
-                                <td>Title</td>
-                                <td> <input type="text" name="title" id="" required></td>
-                                <td>Sub-Title</td>
-                                <td> <input required type="text" name="subtitle" id=""></td>
+                                <td>First Name</td>
+                                <td> <input type="text" name="firstname" id="" required></td>
                             </tr>
                             <tr>
-                            <td>Image</td>
-                                <td>
-                                    <input type="file" id="imageUpload" name="image" accept="image/png, image/jpeg" required>
-                                </td>
-
-                                <td>Category</td>
-                                <td>
-                                    <select name="categories" style="padding: 10px;width:100%;cursor:pointer" required>
-                                    <option value="" disabled selected>Select a category</option>
-                                        <option value="technology">Technology</option>
-                                        <option value="business">Business</option>
-                                        <option value="law">Law</option>
-                                        <option value="sport">Sports</option>
-                                        <option value="game">Game</option>
-
-
-                                    </select>
-                                </td>
+                                <td>Last Name</td>
+                                <td> <input required type="text" name="lastname" id=""></td>
                             </tr>
                             <tr>
- 
-                                <td>Description</td>
-                                <td colspan="40"> <textarea  name="description" rows="12" cols="85" id="" required></textarea></td>
- 
+                                <td>Email</td>
+                                <td> <input type="email" name="email" id="" required></td>
                             </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td> <input required type="password" name="password" id=""></td>
+                            </tr>
+
+                            <tr>
+                                <td>Confirm Password</td>
+                                <td> <input required type="password" name="" id=""></td>
+                            </tr>
+
                             <td>
 
                                 <?php
@@ -118,11 +107,11 @@ session_start();
                                 ?>
                             </td>
                             <tr>
-                            <td><button  type="submit">Submit</button></td>
+                                <td><button type="submit">Submit</button></td>
                             </tr>
                         </table>
                     </form>
-                    
+
                 </div>
             </div>
 

@@ -65,6 +65,8 @@
   flex: 1;
   overflow-y: auto;
 }
+
+
 .submission_form {
   background: rgba(255, 255, 255, 0.31);
   border-radius: 16px;
@@ -79,16 +81,12 @@
   position: relative;
   top: 15%;
 }
-.mod_form{
-  padding: 20px;
-}
 .post_table td {
   padding: 10px;
 }
 .post_table input {
   padding: 5px;
 }
-
 .post_table button {
   padding: 15px;
   border-radius: 10px;
@@ -98,6 +96,8 @@
   font-weight: 600;
   color: rgb(78, 28, 214);
   transition: all 0.5s ease;
+  display: inline-block;
+
 }
 
 .post_table button:hover {
@@ -106,6 +106,7 @@
   box-shadow: 0 0 10px rgba(121, 82, 228, 0.6);
   border-color: rgb(121, 82, 228);
 }
+
 .side_item_list {
   display: flex;
 }
@@ -143,52 +144,6 @@
   margin-top: 14px;
   cursor: pointer;
 }
-.post_table input[type="text"] {
-  padding: 10px 12px;
-  border: 2px solid rgb(78, 28, 214);
-  border-radius: 8px;
-  font-size: 14px;
-  /* width: 70%; */
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
-.post_table input[type="text"]:focus {
-  outline: none;
-  border-color: rgb(121, 82, 228);
-  box-shadow: 0 0 8px rgba(121, 82, 228, 0.4);
-}
-
-.post_table select {
-  padding: 10px;
-  border: 2px solid rgb(78, 28, 214);
-  border-radius: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-color: white;
-}
-
-.post_table select:focus {
-  outline: none;
-  border-color: rgb(121, 82, 228);
-  box-shadow: 0 0 8px rgba(121, 82, 228, 0.4);
-}
-
-/* Textarea styling */
-.post_table textarea {
-  padding: 12px;
-  border: 2px solid rgb(78, 28, 214);
-  border-radius: 8px;
-  font-size: 14px;
-  width: 100%;
-  box-sizing: border-box;
-  resize: vertical;
-  transition: all 0.3s ease;
-}
-
-.post_table textarea:focus {
-  outline: none;
-  border-color: rgb(121, 82, 228);
-  box-shadow: 0 0 8px rgba(121, 82, 228, 0.4);
+.mod_form{
+  padding: 20px;
 }
