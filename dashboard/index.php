@@ -35,14 +35,15 @@ $_SESSION['is_valid_user'] = true;
             <img src="../assets/upload.png" alt="">
                 <p class="side_items">Post</p>
             </a> <br>
+            <a class="side_items_anchor" href="../user_grid/index.php">
+            <img src="../assets/user.png" alt="">
+                <p class="side_items">User Grid</p>
+            </a><br>
             <a class="side_items_anchor" href="../construction/index.php">
             <img src="../assets/tablelist.png" alt="">
                 <p class="side_items">Table List</p>
             </a><br>
-            <a class="side_items_anchor" href="../construction/index.php">
-            <img src="../assets/user.png" alt="">
-                <p class="side_items">User Grid</p>
-            </a><br>
+            
             <a class="side_items_anchor" href="../construction/index.php">
             <img src="../assets/document.png" alt="">
                 <p class="side_items">Document</p>
