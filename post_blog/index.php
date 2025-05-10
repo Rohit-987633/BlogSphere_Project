@@ -24,8 +24,8 @@ session_start();
 
             <div class="top_item" style="display: flex;padding:10px">
 
-                <img src="../assets///logo.png" alt="">
-                <h2 style="margin-top:10px;">BlogSphere</h2>
+            <img src="../assets///logo.png" alt="" class="logo_img">
+                <h2 class="brand_name" style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
             <a class="side_items_anchor" href="../dashboard/index.php">

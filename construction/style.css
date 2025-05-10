@@ -2,7 +2,29 @@
     margin: 0;
     padding: 0;
 }
+@media (max-width: 1443px) {
+  .logo_img{
+    margin: auto;
+  }
+  
+  .brand_name {
+      display: none;
+  }
+}
 
+@media (max-width: 1181px) {
+  .brand_name {
+      display: none;
+  }
+  .side_items_anchor{
+    display: flex;
+    justify-content: center;
+  }
+
+  .side_items {
+      display: none;
+  }
+}
 .dashboard {
     display: flex;
     width: 100%;
