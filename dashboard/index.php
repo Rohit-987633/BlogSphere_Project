@@ -20,8 +20,8 @@ $_SESSION['is_valid_user'] = true;
 
             <div class="top_item" style="display: flex;padding:10px">
 
-                <img src="../assets///logo.png" alt="">
-                <h2 style="margin-top:10px;">BlogSphere</h2>
+                <img src="../assets///logo.png" alt="" class="logo_img">
+                <h2 class="brand_name" style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
             <!-- <div class="side_item_list"> <img src="../assets//adminlogo.png" alt="">
@@ -51,8 +51,13 @@ $_SESSION['is_valid_user'] = true;
             <a class="side_items_anchor" href="../construction/index.php">
             <img src="../assets/support.png" alt="">
                 <p class="side_items">Support</p>
+            </a><br>    
+            <hr style="position: absolute; bottom: 75px; width: 100%; left: 0; border: none; border-top: 1px solid white;">
+            <a class="side_items_anchor no_hover" href="../construction/index.php" style="position: absolute;bottom:10px;color:white">
+            <img src="../assets/logoutwhite.png" alt="">
+                <p class="side_items">Logout</p>
             </a><br>
-
+            
 
         </div>
 
@@ -63,7 +68,8 @@ $_SESSION['is_valid_user'] = true;
                 <div class="topbar_info">
                     <img class="user_logo" src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
                     <p>Rohit Singh</p>
-                    <a href="../php/logout.php"><img src="../assets///back.png" alt="" class="logout_btn"></a>
+                    <a href="../php/logout.php" onclick="return confirm('Are you sure you want to logout?');">
+                        <img src="../assets///back.png" alt="" class="logout_btn"></a>
                 </div>
             </div>
 
@@ -75,16 +81,16 @@ $_SESSION['is_valid_user'] = true;
                     </div>
                     <div class="card_body">
                         <h2 class="header_card">4,000</h2>
-                        <h2 style="color: gray;">Total Blogs</h2>
+                        <h2 style="color: gray;">Blogs</h2>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card_header">
-                        <img src="../assets/blog.png" alt="">
+                        <img src="../assets/cmt.png" alt="" class="dashboard_card_img">
                     </div>
                     <div class="card_body">
-                        <h2 class="header_card">4,000</h2>
-                        <h2 style="color: gray;">Total Blogs</h2>
+                        <h2 class="header_card">800</h2>
+                        <h2 style="color: gray;">Comment</h2>
                     </div>
                 </div>
                 
@@ -94,7 +100,7 @@ $_SESSION['is_valid_user'] = true;
                 </div>
                 <div class="card_body">
                 <h2 class="header_card">200</h2>
-                <h2 style="color: gray;">Total Likes</h2>
+                <h2 style="color: gray;">Likes</h2>
                     </div>
                 </div>
                 <div class="card">
@@ -103,7 +109,7 @@ $_SESSION['is_valid_user'] = true;
                     </div>
                     <div class="card_body">
                     <h2 class="header_card">78</h2>
-                    <h2 style="color: gray;">Total Share</h2>
+                    <h2 style="color: gray;">Share</h2>
                     </div>
                 </div>
 
@@ -124,8 +130,11 @@ $_SESSION['is_valid_user'] = true;
                     <br><br>
                     <h2>Diagrams</h2>
                 </div>
-                
+                <footer>
+            <p style="text-align: center;color:#6d6969;background-color:white;padding:20px ">Copyright © 2025 Nepal Tech. All Rights Reserved.
+            </footer>    
             </div>
+            
 
             
 

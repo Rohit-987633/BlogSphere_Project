@@ -3,6 +3,82 @@
   padding: 0;
 }
 
+@media (max-width: 1443px) {
+  .logo_img{
+    margin: auto;
+  }
+  
+  .brand_name {
+      display: none;
+  }
+}
+
+@media (max-width: 1353px) {
+
+    .card {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .card_header img.dashboard_card_img {
+        width: 60px;
+    }
+
+    .header_card {
+        font-size: 1.5rem;
+    }
+
+    .card_body h2:nth-child(2) {
+        font-size: 1rem;
+    }
+
+  
+}
+@media (min-width:300px) and (max-width:1617px){
+  .test{
+    padding: 0 !important;
+    background-color: red;
+    margin-left: 10px !important;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1017px){
+
+    .card {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .card_header img.dashboard_card_img {
+        width: 60px;
+    }
+
+    .header_card {
+        font-size: 1.2rem;
+    }
+
+    .card_body h2:nth-child(2) {
+        font-size: 1rem;
+    }
+
+  
+}
+
+
+@media (max-width: 1181px) {
+  .brand_name {
+      display: none;
+  }
+  .side_items_anchor{
+    display: flex;
+    justify-content: center;
+  }
+
+  .side_items {
+      display: none;
+  }
+}
 .dashboard {
   display: flex;
   width: 100%;
@@ -70,6 +146,7 @@
   overflow-y: auto;
 }
 
+
 .side_item_list {
   display: flex;
 }
@@ -104,7 +181,7 @@
 
 .card {
   background-color:white;
-  width: 18%;
+  width: 21%;
   height: 200px;
   margin: 25px;
   float: left;
