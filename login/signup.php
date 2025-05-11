@@ -1,51 +1,4 @@
-<?php
-
-// Database connection details
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "Blogsphere";
-
-// Create a connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$message = '';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $firstName = htmlspecialchars($_POST['first_name']);
-    $lastName = htmlspecialchars($_POST['last_name']);
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $confirmPassword = $_POST['confirm_password'];
-
-    if ($password !== $confirmPassword) {
-        $message = "Passwords do not match!";
-    } else {
-        $check = $conn->prepare("SELECT id FROM sign_up WHERE email = ?");
-        $check->bind_param("s", $email);
-        $check->execute();
-        $check->store_result();
-
-        if ($check->num_rows > 0) {
-            $message = "Email already registered!";
-        } else {
-            $hashedPassword = hash("sha256", $password);
-            $stmt = $conn->prepare("INSERT INTO sign_up (firstname, lastname, email, password) VALUES (?, ?, ?, ?)");
-            $stmt->bind_param("ssss", $firstName, $lastName, $email, $hashedPassword);
-            if ($stmt->execute()) {
-                $message = "Signup successful! You can now log in.";
-            } else {
-                $message = "Error during signup!";
-            }
-        }
-    }
-}
-
-?>
+<?php include '../php/signup_process.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -61,11 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container">
         <nav>
             <img src="../assets/logo.png" alt="">
-            <a> <button class="nav_btn"><b>Login</b></button></a>
-            <a class="nav_link">Contact</a>
-            <a class="nav_link">Article</a>
-            <a class="nav_link">About</a>
-            <a class="nav_link">Home</a>
+            <a href="../login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
+            <a href="../contact/index.php" class="nav_link">Contact</a>
+            <a href="../service/index.php" class="nav_link">Article</a>
+            <a href="../about_us/index.php" class="nav_link">About</a>
+            <a href="../home/index.php" class="nav_link">Home</a>
         </nav>
     </div>
     <div class="login-container">
@@ -115,27 +68,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             errorMessage.style.color = 'red';
             const formCard = document.querySelector('.login-card');
 
-            // Reset error message
+
             const existingError = formCard.querySelector('p');
             if (existingError) {
                 existingError.remove();
             }
 
-            // Validate first name
+
             if (firstName === '') {
                 errorMessage.textContent = 'First name is required.';
                 formCard.appendChild(errorMessage);
                 return false;
             }
 
-            // Validate last name
+
             if (lastName === '') {
                 errorMessage.textContent = 'Last name is required.';
                 formCard.appendChild(errorMessage);
                 return false;
             }
 
-            // Validate email format
+
             if (email === '') {
                 errorMessage.textContent = 'Email is required.';
                 formCard.appendChild(errorMessage);
@@ -148,21 +101,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 return false;
             }
 
-            // Validate password
+
             if (password === '') {
                 errorMessage.textContent = 'Password is required.';
                 formCard.appendChild(errorMessage);
                 return false;
             }
 
-            // Check password length
+
             if (password.length < 6) {
                 errorMessage.textContent = 'Password must be at least 6 characters long.';
                 formCard.appendChild(errorMessage);
                 return false;
             }
 
-            // Validate confirm password
+
             if (confirmPassword === '') {
                 errorMessage.textContent = 'Please confirm your password.';
                 formCard.appendChild(errorMessage);

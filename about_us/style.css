@@ -60,7 +60,7 @@ body {
     
     border-radius: 20px;
   }
-  /* ///////////////////////////////////////////NAVBAR/////////////////////////////////////////// */
+  
   
   /* =============== ABOUT US SECTION =============== */
 .about_us_div {
@@ -246,8 +246,6 @@ body {
   text-align: center;
 }
 
-
-
 .join-blogosphere-section p {
   font-size: 1rem;
   line-height: 1.6;
@@ -314,8 +312,7 @@ color: white;
   margin-top: 2%;
 }
 .social_media_img{
-  /* margin: 20px;
-  margin-top: 2%; */
+
   display: flex;
   justify-content: center;
   justify-items: center;
