@@ -16,8 +16,8 @@
 
         <div class="top_item" style="display: flex;padding:10px">
 
-                <img src="../assets///logo.png" alt="">
-                <h2 style="margin-top:10px;">BlogSphere</h2>
+        <img src="../assets///logo.png" alt="" class="logo_img">
+                <h2 class="brand_name" style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
             <!-- <div class="side_item_list"> <img src="../assets//adminlogo.png" alt="">
@@ -31,14 +31,15 @@
             <img src="../assets/upload.png" alt="">
                 <p class="side_items">Post</p>
             </a> <br>
+            <a class="side_items_anchor" href="../user_grid/index.php">
+            <img src="../assets/user.png" alt="">
+                <p class="side_items">User Grid</p>
+            </a><br>
             <a class="side_items_anchor" href="../construction/index.php">
             <img src="../assets/tablelist.png" alt="">
                 <p class="side_items">Table List</p>
             </a><br>
-            <a class="side_items_anchor" href="../construction/index.php">
-            <img src="../assets/user.png" alt="">
-                <p class="side_items">User Grid</p>
-            </a><br>
+            
             <a class="side_items_anchor" href="../construction/index.php">
             <img src="../assets/document.png" alt="">
                 <p class="side_items">Document</p>

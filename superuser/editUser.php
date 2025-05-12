@@ -1,5 +1,21 @@
 <?php
 session_start();
+
+$conn = new mysqli("localhost", "root", "", "Blogsphere");
+
+if (isset($_GET['id'])) {
+    $id = intval($_GET['id']);
+    $sql = "SELECT * FROM sign_up WHERE id = $id";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+    } else {
+        echo "No record found with ID $id.";
+    }
+} else {
+    echo "No ID provided in the URL.";
+};
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,13 +26,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Blog</title>
 </head>
-
 <body>
-
-
-
-
-
     <div class="dashboard">
 
 
@@ -44,7 +54,7 @@ session_start();
                 <img src="../assets/tablelist.png" alt="">
                 <p class="side_items">Table List</p>
             </a><br>
-            
+
             <a class="side_items_anchor" href="../construction/index.php">
                 <img src="../assets/document.png" alt="">
                 <p class="side_items">Document</p>
@@ -58,7 +68,7 @@ session_start();
         <div class="center_content">
 
             <div class="topbar">
-                <h3>Admin Dashboard</h3>
+                <h3>Super User Dashboard</h3>
                 <div class="topbar_info">
                     <img class="user_logo" src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
                     <p>Rohit Singh</p>
@@ -67,45 +77,28 @@ session_start();
             </div>
 
             <div class="content">
-                
+
                 <div class="submission_form">
-                    <h2 style="text-align: center;background-image:url('../assets/purple.png ');padding:10px">
-                        Post A Blog
-                    </h2> <br> <br>
-                    
-                    <form action="../php/postArticle.php" , method="POST" class="mod_form">
+                    <h1 style="text-align: center;">
+                        Update Record
+                    </h1> <br> <br>
+
+                    <form action="../php/updateSuperuser.php" , method="POST">
                         <table class="post_table">
                             <tr>
-                                <td>Title</td>
+
+                                <td>First Name</td>
+                                <td> <input type="text" name="firstname" id="" value="<?= $row['firstname'] ?>" required></td>
+                                <td>Last Name</td>
+                                <td> <input required type="text" name="lastname" id="" value="<?= $row['lastname'] ?>"></td>
+                            </tr>
+                            <tr>
+
+                                <td>Email</td>
+                                <td> <input type="text" name="email" id="" value="<?= $row['email'] ?>" required></td>
+                                <td>Confirm Email</td>
                                 <td> <input type="text" name="title" id="" required></td>
-                                <td>Sub-Title</td>
-                                <td> <input required type="text" name="subtitle" id=""></td>
-                            </tr>
-                            <tr>
-                            <td>Image</td>
-                                <td>
-                                    <input type="file" id="imageUpload" name="image" accept="image/png, image/jpeg" required>
-                                </td>
 
-                                <td>Category</td>
-                                <td>
-                                    <select name="categories" style="padding: 10px;width:100%;cursor:pointer" required>
-                                    <option value="" disabled selected>Select a category</option>
-                                        <option value="technology">Technology</option>
-                                        <option value="business">Business</option>
-                                        <option value="law">Law</option>
-                                        <option value="sport">Sports</option>
-                                        <option value="game">Game</option>
-
-
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
- 
-                                <td>Description</td>
-                                <td colspan="40"> <textarea  name="description" rows="12" cols="85" id="" required></textarea></td>
- 
                             </tr>
                             <td>
 
@@ -118,23 +111,15 @@ session_start();
                                 ?>
                             </td>
                             <tr>
-                            <td><button  type="submit">Submit</button></td>
+                                <td><button type="submit">Submit</button></td>
                             </tr>
                         </table>
                     </form>
-                    
+
                 </div>
             </div>
 
         </div>
     </div>
-
-
-
-
-
-
-
 </body>
-
 </html>
