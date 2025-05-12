@@ -40,8 +40,8 @@
             </form>
 
             <!-- Error Message -->
-            <?php if (!empty($error_message)): ?>
-                <p style="color:red;"><?php echo $error_message; ?></p>
+            <?php if (!empty($message)): ?>
+                <p style="color:red;"><?php echo $message; ?></p>
             <?php endif; ?>
 
             <p class="signup-link">
