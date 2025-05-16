@@ -5,6 +5,11 @@ session_start();
 <html lang="en">
 
 <head>
+<script>
+      if (!localStorage.getItem('user_id')) {
+        window.location.href = '../login/index.php';
+      }
+    </script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,7 +78,8 @@ session_start();
                         Post A Blog
                     </h2> <br> <br>
                     
-                    <form action="../php/postArticle.php" , method="POST" class="mod_form">
+                    <form action="../php/postArticle.php" , method="POST" class="mod_form" enctype="multipart/form-data">
+
                         <table class="post_table">
                             <tr>
                                 <td>Title</td>
@@ -84,7 +90,7 @@ session_start();
                             <tr>
                             <td>Image</td>
                                 <td>
-                                    <input type="file" id="imageUpload" name="image" accept="image/png, image/jpeg" required>
+                                    <input type="file" id="imageUpload" name="image" accept="image/jpg, image/png, image/gif, image/jpeg" required>
                                 </td>
 
                                 <td>Category</td>

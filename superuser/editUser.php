@@ -21,11 +21,17 @@ if (isset($_GET['id'])) {
 <html lang="en">
 
 <head>
+<script>
+      if (!localStorage.getItem('user_id')) {
+        window.location.href = '../login/index.php';
+      }
+    </script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post Blog</title>
 </head>
+
 <body>
     <div class="dashboard">
 
@@ -34,7 +40,7 @@ if (isset($_GET['id'])) {
 
             <div class="top_item" style="display: flex;padding:10px">
 
-            <img src="../assets///logo.png" alt="" class="logo_img">
+                <img src="../assets///logo.png" alt="" class="logo_img">
                 <h2 class="brand_name" style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
@@ -78,13 +84,14 @@ if (isset($_GET['id'])) {
 
             <div class="content">
 
-                <div class="submission_form">
-                    <h1 style="text-align: center;">
-                        Update Record
-                    </h1> <br> <br>
 
-                    <form action="../php/updateSuperuser.php" , method="POST">
-                        <table class="post_table">
+
+                <div class="submission_form2">
+                    <h2 style="text-align: center;background-image:url('../assets/purple.png');padding:10px">
+                        Update Profile
+                    </h2>
+                    <form action="../php/updateUser.php" , method="POST" class="mod_form">
+                        <table class="post_table edit_table">
                             <tr>
 
                                 <td>First Name</td>
@@ -98,8 +105,16 @@ if (isset($_GET['id'])) {
                                 <td> <input type="text" name="email" id="" value="<?= $row['email'] ?>" required></td>
                                 <td>Confirm Email</td>
                                 <td> <input type="text" name="title" id="" required></td>
-
                             </tr>
+
+                            <tr>
+                                <td>Password</td>
+                                <td> <input type="password" name="password" value="<?=$row['password']?>" id="" required></td>
+                                <td>Confirm Password</td>
+                                <td> <input type="text" name="title" id="" required></td>
+                            </tr>
+
+
                             <td>
 
                                 <?php
@@ -111,15 +126,17 @@ if (isset($_GET['id'])) {
                                 ?>
                             </td>
                             <tr>
-                                <td><button type="submit">Submit</button></td>
+                                <td><button type="submit" >Submit</button></td>
+                                <td> <a href="./index.php"> <button type="button">Back</button></a></td>
+
                             </tr>
                         </table>
                     </form>
 
                 </div>
             </div>
-
         </div>
     </div>
 </body>
+
 </html>

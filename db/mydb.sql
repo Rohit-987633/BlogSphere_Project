@@ -33,3 +33,6 @@ Create TABLE articles(
     categories varchar(30) not null,
     image longblob
 );
+ALTER TABLE articles DROP COLUMN image;
+
+ALTER TABLE articles ADD COLUMN image VARCHAR(255);

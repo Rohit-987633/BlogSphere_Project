@@ -47,8 +47,9 @@
                 <button type="submit" class="signup-btn">Sign Up</button>
             </form>
 
-            <?php if (!empty($message)): ?>
-                <p style="color: red;"><?php echo $message; ?></p>
+            <?php if (!empty($message)):                header("refresh:3;url=index.php"); ?>
+
+
             <?php endif; ?>
 
             <p class="signup-link">
@@ -136,3 +137,4 @@
 </body>
 
 </html>
+

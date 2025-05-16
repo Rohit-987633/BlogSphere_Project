@@ -24,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute();
     $stmt->store_result();
 
-
     if ($stmt->num_rows === 1) {
         $stmt->bind_result($user_id, $hashed_password);
         $stmt->fetch();
@@ -45,7 +44,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['firstname'] = $firstname;
             $_SESSION['lastname'] = $lastname;
 
-            header("Location:../dashboard/index.php");
+            // Encrypt the user ID
+            $encrypted_id = base64_encode($user_id); // Simple encoding as encryption
+
+            // Output the encrypted ID so JavaScript can capture it and store it in localStorage
+            echo "<script>
+                    localStorage.setItem('user_id', '$encrypted_id');
+                    window.location = '../dashboard/index.php'; // Redirect to dashboard
+                  </script>";
             exit();
         } else {
             $message = "Invalid email or password.";

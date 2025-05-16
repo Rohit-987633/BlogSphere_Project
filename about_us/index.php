@@ -6,35 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - BlogSphere</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
     <div class="long_images" style="background-size: cover;
     background-repeat: no-repeat;
-    background-image: url('../assets//loginback.jpg');">
+    background-image: url('../assets/purple_v.png');">
 
 
 
         <div class="container">
-            <nav>
+        <nav>
                 <img src="../assets/logo.png" alt="">
                 <a href="../login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
                 <a href="../contact/index.php" class="nav_link">Contact</a>
                 <a href="../service/index.php" class="nav_link">Article</a>
-                <a href="../about_us/index.php" class="nav_link">About</a>
-                <a href="../home/index.php" class="nav_link">Home</a>
+                <a href="../about_us/index.php" class="nav_link act_nav_link" style="color:black">About</a>
+                <a href="../Home/index.php"class="nav_link">Home</a>
             </nav>
+
+
         </div>
         <!-- PAGE HEADING -->
         <div class="content_box">
             <div class="container">
-                <h1 class="main-heading" style="text-align: center;">About Us</h1>
+                <h1 class="main-heading" style="text-align: center;color:white;">About Us</h1>
                 <div class="about_us_div">
-                    <div class="image_about_us">
+                    <!-- <div class="image_about_us">
                         <img src="../assets/about.jpg" alt="">
-                    </div>
-                    <p class="description">
+                    </div> -->
+                    <p class="description" style="color: white;">
                         Welcome to <strong>BlogSphere</strong> — your one-stop destination for reading, sharing, and
                         exploring a world of diverse blogs! Whether you’re an avid reader or an aspiring writer, we’ve
                         created a space where ideas flow freely, and knowledge is shared across a wide range of topics.
@@ -47,23 +49,27 @@
                 </div>
             </div>
 
-            <div class="container">
+            
+
+        </div>
+    </div>
+    <div class="container">
                 <div class="our_mission content_box">
                     <h2 class="sub-heading">Our Mission</h2>
-                    <div class="about_us_div">
-                        <div class="image_about_us">
+                    <h3 class="sub-heading2">"Empowering minds through stories, insights, and shared experiences daily."</h3>
+                    <div class="about_us_divs">
+                        <div class="image_about_us2 ">
                             <img src="../assets/mission.jpg" alt="Blogsphere Mission Image">
                         </div>
-                        <div class="description">
+                        <div class="description" style="text-align: justify";>
+                            <br>
                             <p>
                                 At <strong>Blogsphere</strong>, we believe that everyone has a story to tell. Our
                                 mission is
                                 to create a dynamic and inclusive platform where voices from all walks of life can be
                                 heard,
                                 shared, and celebrated.
-                            </p><br></br>
-
-                            <p>
+                            
                                 Whether you're a hobbyist blogger, a professional writer, or someone simply looking to
                                 share
                                 thoughts and ideas, Blogsphere provides the tools and support to help you thrive. We
@@ -71,7 +77,7 @@
                                 individuals to express themselves freely, build personal brands, and reach audiences far
                                 and
                                 wide.
-                            </p><br></br>
+                            </p><br>
 
                             <p>
                                 We envision a world where ideas flow freely across borders and barriers. That’s why we
@@ -81,27 +87,21 @@
                                 foster genuine connections between writers and readers, and to build a global network
                                 rooted
                                 in respect, curiosity, and creativity.
-                            </p><br></br>
-
-                            <p>
                                 As technology and content evolve, so does Blogsphere. We are committed to continuous
                                 improvement—listening to our users, integrating the latest tools, and ensuring our
                                 platform
                                 remains a safe, vibrant, and inspiring space for everyone.
-                            </p><br></br>
+                            </p><br>
 
                             <p>
                                 In short, Blogsphere is more than a blogging platform—it's a movement to democratize
                                 content
                                 creation, amplify unique perspectives, and build bridges through words.
-                            </p><br></br>
+                            </p><br>
                         </div>
                     </div>
                 </div>
             </div>
-
-        </div>
-    </div>
     <div class="offer">
 
 
@@ -158,7 +158,7 @@
         </div>
     </div>
 
-
+<br><br>
     <h2 class="sub-heading" style="text-align: center;">Writers vs Readers</h2>
 
     <div class="table_wrapper">
@@ -266,13 +266,10 @@
             </div>
         </div>
     </div>
-
+<br><br>
     <footer class="foot_home">
         <di v class="container">
-            <div class="subscribe_part">
-                <input type="email" name="" id="" placeholder="Enter E-mail">
-                <button class="subscribe_part_btn">Submit</button>
-            </div>
+            
             <div class="social_media">
                 <a class="social_media_link" href="https://www.facebook.com"> <img class="social_media_img"
                         src="../assets//fb.webp" alt=""></a>
