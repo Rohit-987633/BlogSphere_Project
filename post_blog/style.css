@@ -168,7 +168,7 @@
 }
 .post_table input[type="text"] {
   padding: 10px 12px;
-  border: 2px solid rgb(78, 28, 214);
+  border: 2px solid rgb(199, 183, 245);
   border-radius: 8px;
   font-size: 14px;
   /* width: 70%; */
@@ -178,13 +178,13 @@
 
 .post_table input[type="text"]:focus {
   outline: none;
-  border-color: rgb(121, 82, 228);
+  border-color: rgb(204, 194, 231);
   box-shadow: 0 0 8px rgba(121, 82, 228, 0.4);
 }
 
 .post_table select {
   padding: 10px;
-  border: 2px solid rgb(78, 28, 214);
+  border: 2px solid rgb(199, 183, 245);
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
@@ -201,7 +201,7 @@
 /* Textarea styling */
 .post_table textarea {
   padding: 12px;
-  border: 2px solid rgb(78, 28, 214);
+  border: 2px solid rgb(199, 183, 245);
   border-radius: 8px;
   font-size: 14px;
   width: 100%;

@@ -150,6 +150,7 @@
 .side_item_list {
   display: flex;
 }
+
 .user_logo{
   width: 40px !important;
   height: 10% !important ;
@@ -239,4 +240,37 @@
  display: flex; 
  flex-direction: row;
  flex-wrap: wrap;
+}
+.user_table th{
+  border:1px solid black;
+  padding: 10px;
+  /* background-color: rgb(131, 113, 230); */
+  background-image: url("../assets/purple.png");
+}
+.user_table td{
+  border:  1px solid black;
+  padding:10px;
+  text-align: center;
+}
+.user_table{
+  border-collapse:collapse;
+}
+.del{
+  width: 20px;
+  cursor: pointer;
+  height: 10%;
+  float: left;
+}
+.del2{
+  width: 20px;
+  cursor: pointer;
+  height: 10%;
+float: right;
+}
+tr:nth-child(odd) {
+  background-color: rgb(227, 229, 235);
+}
+.table_article_images{
+  /* border-radius: 50px !important; */
+  width: 100px;
 }

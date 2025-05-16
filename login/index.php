@@ -38,7 +38,7 @@
 
                 <button type="submit" class="login-btn">Login</button>
             </form>
-
+<br>
             <!-- Error Message -->
             <?php if (!empty($message)): ?>
                 <p style="color:red;"><?php echo $message; ?></p>

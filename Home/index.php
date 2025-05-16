@@ -1,4 +1,23 @@
+<?php
+if (isset($_POST['submit'])) {
+    $email = trim($_POST['email']);
 
+    if (!empty($email)) {
+        // Store alert message in session and redirect
+        session_start();
+        $_SESSION['alert'] = 'Sent successfully!';
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+    } 
+}
+
+// Show alert if set in session
+session_start();
+if (isset($_SESSION['alert'])) {
+    echo "<script>alert('" . $_SESSION['alert'] . "');</script>";
+    unset($_SESSION['alert']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +54,7 @@ background-repeat: no-repeat;
                     </p> <br>
                     <p class="description">As part of our community, you can also provide feedback through our contact form, helping us improve and shape BlogSphere into an even better platform. Dive in, explore, and let's make blogging a truly enriching experience together. Welcome to the hub for inspiration and connection—welcome to BlogSphere!</p>
                 </div>
-                <button class="main_first_part_btn">Contact Us</button>
+                <a href="../contact/index.php"><button class="main_first_part_btn">Contact Us</button></a>
             </div>
 
 
@@ -130,10 +149,16 @@ background-repeat: no-repeat;
     </div>
     <footer class="foot_home">
         <div class="container">
-            <div class="subscribe_part">
+            <!-- <div class="subscribe_part">
                 <input type="email" name="" id="" placeholder="Enter E-mail">
-                <button class="subscribe_part_btn">Submit</button>
-            </div>
+                <button class="subscribe_part_btn" type="submit" onclick="alert('Sent successfully!')">Submit</button>
+            </div> -->
+            <form method="POST">
+  <div class="subscribe_part">
+    <input type="email" name="email" placeholder="Enter E-mail">
+    <button class="subscribe_part_btn" type="submit" name="submit">Submit</button>
+  </div>
+</form>
             <div class="social_media">
                 <a class="social_media_link" href="https://www.facebook.com"> <img class="social_media_img" src="../assets//fb.webp" alt=""></a>
                 <a class="social_media_link" href="https://www.instagram.com"> <img class="social_media_img" src="../assets//insta.png" alt=""></a>

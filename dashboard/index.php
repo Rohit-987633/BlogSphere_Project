@@ -1,11 +1,33 @@
 <?php
 session_start();
+$conn= new mysqli("localhost","root","","Blogsphere");
 $_SESSION['is_valid_user'] = true;
+if (isset($_SESSION['user'])) {
+    $email = $_SESSION['user'];
+    $firstname = $_SESSION['firstname'];
+    $lastname = $_SESSION['lastname'];
+
+    // If you want to retrieve additional user information (like encrypted ID)
+    if (isset($_COOKIE['user_id'])) {
+        $encrypted_id = $_COOKIE['user_id'];
+        // Decode or decrypt the ID as needed (here, assuming base64 encoding)
+        $user_id = base64_decode($encrypted_id);
+    }
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<script>
+      if (!localStorage.getItem('user_id')) {
+        window.location.href = '../login/index.php';
+      }
+    </script>
+    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -50,13 +72,9 @@ $_SESSION['is_valid_user'] = true;
             </a><br>
             <a class="side_items_anchor" href="../construction/index.php">
             <img src="../assets/support.png" alt="">
-                <p class="side_items">Support</p>
+                <p class="side_items">Support</p>   
             </a><br>    
-            <hr style="position: absolute; bottom: 75px; width: 100%; left: 0; border: none; border-top: 1px solid white;">
-            <a class="side_items_anchor no_hover" href="../construction/index.php" style="position: absolute;bottom:10px;color:white">
-            <img src="../assets/logoutwhite.png" alt="">
-                <p class="side_items">Logout</p>
-            </a><br>
+            
             
 
         </div>
@@ -67,8 +85,9 @@ $_SESSION['is_valid_user'] = true;
                 <h3>Admin Dashboard</h3>
                 <div class="topbar_info">
                     <img class="user_logo" src="../assets///adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
-                    <p>Rohit Singh</p>
-                    <a href="../php/logout.php" onclick="return confirm('Are you sure you want to logout?');">
+                    <p style="font-size:larger !important;"><?php echo $firstname ?></p>
+
+                    <a href="../php/logout.php" id="logoutLink" >
                         <img src="../assets///back.png" alt="" class="logout_btn"></a>
                 </div>
             </div>
@@ -130,9 +149,81 @@ $_SESSION['is_valid_user'] = true;
                     <br><br>
                     <h2>Diagrams</h2>
                 </div>
-                <footer>
+
+
+
+
+                
+
+
+            
+                <div class="chart_content">
+                <div class="image_content_dashboard">
+                <table style="width:100%" class="user_table">
+                        <tr>
+                            <th>Id</th>
+                            <th>Main Title</th>
+                            <th>Sub Title</th>
+                            <th>Description </th>
+                            <th>Category </th>
+                            <th>Image</th>
+                            <th style="width: 7%;">Action</th>
+
+                        </tr>
+
+
+
+
+
+
+
+
+
+
+                        <?php
+$sql = "SELECT id, mainTitle, subTitle, description, categories, image2 FROM articles";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        // Debug: Output the image URL
+        echo "<tr>
+            <td>" . $row['id'] . "</td>
+            <td>" . htmlspecialchars($row['mainTitle']) . "</td>
+            <td>" . htmlspecialchars($row['subTitle']) . "</td>
+            <td>" . htmlspecialchars($row['description']) . "</td>
+            <td>" . htmlspecialchars($row['categories']) . "</td>
+            <td>
+                <img class='table_article_images' src='" . htmlspecialchars($row['image2']) . "' />
+            </td>
+            <td>
+                <a href='../php/deleteUser.php?id=" . $row['id'] . "' onclick=\"return confirm('Are you sure you want to delete this record?');\">
+                    <img src='../assets/del.png' alt='Delete' class='del'>
+                </a>
+                <a href='./editUser.php?id=" . $row['id'] . "'>
+                    <img src='../assets/edit.png' alt='Edit' class='del2'>
+                </a>
+            </td>
+        </tr>";
+    }
+} else {
+    echo "<tr><td colspan='7'>No records found.</td></tr>";
+}
+?>
+
+
+
+                    </table>
+                </div>
+                <br>
+                <h2>Articles</h2>
+
+                    </div> 
+                    <br><br>
+                    <footer style="display: block;">
             <p style="text-align: center;color:#6d6969;background-color:white;padding:20px ">Copyright © 2025 Nepal Tech. All Rights Reserved.
             </footer>    
+                </div>
             </div>
             
 
@@ -140,6 +231,23 @@ $_SESSION['is_valid_user'] = true;
 
         </div>
     </div>
+    
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const logoutLink = document.getElementById('logoutLink');
+
+    if (logoutLink) {
+      logoutLink.addEventListener('click', function (event) {
+        event.preventDefault(); // Stop the default navigation
+        if (confirm('Are you sure you want to logout?')) {
+          localStorage.clear(); // Clear all localStorage
+          window.location.href = this.href; // Then redirect
+        }
+      });
+    }
+  });
+</script>
+
 </body>
 
 </html>

@@ -2,8 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
+
 }
 
 body {
@@ -16,8 +15,7 @@ body {
   .container {
     margin-left: 100px;
     margin-right: 100px;
-    padding: 0 20px;
-    margin-bottom: 100px;
+    
     
   }
   
@@ -53,16 +51,26 @@ body {
     border: 2px solid white;
     color: white;
   }
+  .act_nav_link:hover{
+    color: white !important;
+  }
   .nav_link:hover {
     background-color: rgb(2, 30, 122);
     color: white;
     transition: 0.3s ease-in-out;
-    
+    padding: 13px;
     border-radius: 20px;
   }
   
   
   /* =============== ABOUT US SECTION =============== */
+  .long_images{
+    border-bottom-left-radius: 50% 80px !important;
+    border-bottom-right-radius: 50% 150px !important;
+  }
+  .content_box{
+    padding: 60px !important;
+  }
 .about_us_div {
   display: flex;
   flex-wrap: wrap;
@@ -72,11 +80,28 @@ body {
   margin-top: 40px;
 }
 
+
 .image_about_us {
   flex: 1;
   max-width: 1200px;
   text-align: center;
 }
+
+.image_about_us2 {
+  flex: 1;
+  /* max-width: 1200px; */
+  text-align: center;
+}
+
+
+.image_about_us2 img {
+  width: 30%;
+  border-radius: 50px !important;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 
 .image_about_us img {
   width: 100%;
@@ -88,6 +113,7 @@ body {
 .description {
   flex: 2;
   font-size: 1rem;
+  font-weight: 900;
   margin: 10px 0;
 }
 
@@ -101,6 +127,14 @@ body {
   
 }
 
+.sub-heading2{
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  position: relative;
+}
 
 .main-heading, .sub-heading {
   text-align: center;

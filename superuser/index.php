@@ -11,6 +11,11 @@ if ($conn->connect_error) {
 <html lang="en">
 
 <head>
+<script>
+      if (!localStorage.getItem('user_id')) {
+        window.location.href = '../login/index.php';
+      }
+    </script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
