@@ -3,6 +3,30 @@
   padding: 0;
 }
 
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(87, 140, 236); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3033f0; 
+}
+
+
+
 @media (max-width: 1443px) {
   .logo_img{
     margin: auto;
@@ -86,7 +110,7 @@
 }
 
 .dashboard_sidebar {
-  background-image: url("../assets/purple.png");
+  background-image: url("../../../assets/purple.png");
     background-repeat: no-repeat;
     background-size: cover;
   width: 13%;
@@ -245,7 +269,7 @@
   border:1px solid black;
   padding: 10px;
   /* background-color: rgb(131, 113, 230); */
-  background-image: url("../assets/purple.png");
+  background-image: url("../../../assets/purple.png");
 }
 .user_table td{
   border:  1px solid black;

@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
     if (!empty($email)) {
         // Store alert message in session and redirect
         session_start();
-        $_SESSION['alert'] = 'Sent successfully!';
+        $_SESSION['alert'] = 'Request sent successfully!';
         header("Location: " . $_SERVER['PHP_SELF']);
         exit;
     } 
@@ -31,18 +31,18 @@ if (isset($_SESSION['alert'])) {
 <body>
     <div class="long_images" style="background-size: cover;
 background-repeat: no-repeat;
- background-image: url('../assets//back1.jpg');">
+ background-image: url('../../assets/test.webp ');">
 
 
         <div class="container">
-            <nav>
-                <img src="../assets/logo.png" alt="">
-                <a href="../login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
-                <a href="../contact/index.php" class="nav_link">Contact</a>
-                <a href="../service/index.php" class="nav_link">Article</a>
-                <a href="../about_us/index.php" class="nav_link">About</a>
-                <a class="nav_link">Home</a>
-            </nav>
+        <nav>
+            <img src="../../assets/logo.png" alt="logos">
+            <a href="../../src/login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
+            <a href="../../src/contact/index.php" class="nav_link">Contact</a>
+            <a href="../../src/service/index.php" class="nav_link">Article</a>
+            <a href="../../src/about_us/index.php" class="nav_link">About</a>
+            <a href="../../src/Home/index.php" class="nav_link">Home</a>
+        </nav>
 
             <div class="main_first_part">
                 <div class="home_first_content">
@@ -53,8 +53,11 @@ background-repeat: no-repeat;
                         Aspiring writers are welcome to share their voices and creativity here! With easy-to-use tools, authorized users can publish their own blogs and connect with an audience that shares their interests. We believe in fostering a space where stories are told, knowledge is exchanged, and experiences are shared in a secure and welcoming environment.
                     </p> <br>
                     <p class="description">As part of our community, you can also provide feedback through our contact form, helping us improve and shape BlogSphere into an even better platform. Dive in, explore, and let's make blogging a truly enriching experience together. Welcome to the hub for inspiration and connection—welcome to BlogSphere!</p>
+                    <a href="../../src/contact/index.php"><button class="main_first_part_btn">Contact Us</button></a>
                 </div>
-                <a href="../contact/index.php"><button class="main_first_part_btn">Contact Us</button></a>
+<div class="image-right">
+    <img src="../../assets//blogsphere2.png" alt="">
+</div>
             </div>
 
 
@@ -72,7 +75,7 @@ background-repeat: no-repeat;
 
             <div class="first_blog">
                 <div class="home_left_part_blog">
-                    <img src="../assets///blog4.jpg" alt="">
+                    <img src="../../assets///blog4.jpg" alt="">
                 </div>
                 <div class="home_right_part_blog">
                     <h2>The Last Party by Clare Mackintosh is a gripping crime thriller set in a small Welsh town. During a glitzy New Year's Eve party at a lakeside resort, a wealthy guest, Rhys Lloyd, is found dead. Ffion Morgan, a local detective, investigates as secrets, betrayals, and tensions between the locals and outsiders unravel. As the story shifts between timelines and perspectives, shocking truths emerge about Rhys and the community. It's a suspenseful, character-driven mystery about revenge, hidden pasts, and justice.
@@ -84,7 +87,7 @@ background-repeat: no-repeat;
 
             <div class="first_blog">
                 <div class="home_left_part_blog">
-                    <img src="../assets///blog2.jpg" alt="">
+                    <img src="../../assets///blog2.jpg" alt="">
                 </div>
                 <div class="home_right_part_blog">
                     <h2>Dark at the Crossing by Elliot Ackerman is a powerful novel set on the Turkish-Syrian border. It follows Haris Abadi, an Arab-American who once served the U.S. military and now seeks redemption by joining the Syrian rebels. After a failed border crossing, he meets Amir and Daphne, a couple torn by war and loss. As Haris gets drawn into their complicated lives, he confronts loyalty, identity, and the heavy cost of conflict. The story explores exile, belonging, and the meaning of home.
@@ -97,7 +100,7 @@ background-repeat: no-repeat;
 
             <div class="first_blog">
                 <div class="home_left_part_blog">
-                    <img src="../assets///blog3.jpg" alt="">
+                    <img src="../../assets///blog3.jpg" alt="">
                 </div>
                 <div class="home_right_part_blog">
                     <h2>Hostage by Clare Mackintosh is a tense psychological thriller set on a long-haul flight from London to Sydney. Flight attendant Mina is forced to make an impossible choice when hijackers threaten her daughter's life unless she helps them. As tensions rise onboard, secrets about passengers and crew emerge. The novel explores sacrifice, loyalty, and survival under extreme pressure, leading to a gripping, emotional climax.
@@ -116,30 +119,30 @@ background-repeat: no-repeat;
             <div class="parent">
                 <div class="div1">
                     <div class="card_header">
-                        <img src="../assets//user2.png" alt="">
+                        <img src="../../assets//testi.jpg" alt="">
                     </div>
                     <div class="card_body">
-                        <h1>Rohit Singh</h1> <br>
+                        <h1>Liam Payne</h1> <br>
                         <p>This website is a fantastic platform for sharing insightful articles and blogs. It's user-friendly, well-organized with valuable content that inspires, informs, and connects readers worldwide.
                         </p>
                     </div>
                 </div>
                 <div class="div2">
                     <div class="card_header">
-                        <img src="../assets//user1.png" alt="">
+                        <img src="../../assets//testi2.jpg" alt="">
                     </div>
                     <div class="card_body">
-                        <h1>Ankita Pokhrel</h1> <br>
+                        <h1>Alice Wilson</h1> <br>
                         <p>An excellent website for discovering and sharing thoughtful blogs and articles. The content is diverse, engaging, and easy to access, making it a go-to destination for curious and passionate readers.
                         </p>
                     </div>
                 </div>
                 <div class="div3">
                     <div class="card_header">
-                        <img src="../assets//user3.webp" alt="">
+                        <img src="../../assets//testi3.jpg" alt="">
                     </div>
                     <div class="card_body">
-                        <h1>Bhimsen Parajuli </h1> <br>
+                        <h1>Bin Laden </h1> <br>
                         <p>A great platform for sharing and exploring blogs and articles. The website is easy to navigate, offers fresh and inspiring content, and creates a vibrant community of writers and readers.
                         </p>
                     </div>
@@ -160,10 +163,10 @@ background-repeat: no-repeat;
   </div>
 </form>
             <div class="social_media">
-                <a class="social_media_link" href="https://www.facebook.com"> <img class="social_media_img" src="../assets//fb.webp" alt=""></a>
-                <a class="social_media_link" href="https://www.instagram.com"> <img class="social_media_img" src="../assets//insta.png" alt=""></a>
-                <a class="social_media_link" href="https://www.whatsapp.com"> <img class="social_media_img" src="../assets//whats1.png" alt=""></a>
-                <a class="social_media_link" href="https://www.linkedin.com"> <img class="social_media_img" src="../assets//link.webp" alt=""></a>
+                <a class="social_media_link" href="https://www.facebook.com"> <img class="social_media_img" src="../../assets//fb.webp" alt=""></a>
+                <a class="social_media_link" href="https://www.instagram.com"> <img class="social_media_img" src="../../assets//insta.png" alt=""></a>
+                <a class="social_media_link" href="https://www.whatsapp.com"> <img class="social_media_img" src="../../assets//whats1.png" alt=""></a>
+                <a class="social_media_link" href="https://www.linkedin.com"> <img class="social_media_img" src="../../assets//link.webp" alt=""></a>
             </div>
             <p style="text-align: center;color:#6d6969;padding:20px ">Copyright © 2025 Nepal Tech. All Rights Reserved.</p>
         </div>

@@ -1,4 +1,4 @@
-<?php include '../php/login_process.php'; ?>
+<?php include '../../php/login_process.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,24 +7,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - BlogSphere</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="container">
         <nav>
-            <img src="../assets/logo.png" alt="">
-            <a href="../login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
-            <a href="../contact/index.php" class="nav_link">Contact</a>
-            <a href="../service/index.php" class="nav_link">Article</a>
-            <a href="../about_us/index.php" class="nav_link">About</a>
-            <a href="../home/index.php" class="nav_link">Home</a>
+            <img src="../../assets/logo.png" alt="logos">
+            <a href="../../src/login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
+            <a href="../../src/contact/index.php" class="nav_link">Contact</a>
+            <a href="../../src/service/index.php" class="nav_link">Article</a>
+            <a href="../../src/about_us/index.php" class="nav_link">About</a>
+            <a href="../../src/Home/index.php" class="nav_link">Home</a>
         </nav>
     </div>
     <div class="login-container">
         <div class="login-card">
             <!-- Logo Section -->
-            <img src="../assets/logo.png" alt="Logo" class="logo">
+            <img src="../../assets/logo.png" alt="Logo" class="logo">
 
             <h2>Login</h2>
 
@@ -45,7 +45,7 @@
             <?php endif; ?>
 
             <p class="signup-link">
-                Don't have an account? <a href="signup.php">Sign Up</a>
+                Don't have an account? <a href="./signup.php">Sign Up</a>
             </p>
         </div>
     </div>

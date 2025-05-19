@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 
 $servername = "localhost";
 $username = "root";
@@ -45,7 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $stmtLogin = $conn->prepare("INSERT INTO login (username, password) VALUES (?, ?)");
                 $stmtLogin->bind_param("ss", $email, $hashedPassword);
                 if ($stmtLogin->execute()) {
-                    $message = "Signup successful! You can now log in.";
+                    $_SESSION['message'] = "Signup successful! You can now log in.";
+                    header("Location: ../../src/login/signup.php");
+                    exit;
+
                 } else {
                     $message = "Error during login table insertion.";
                 }

@@ -10,11 +10,7 @@ if (isset($_GET['id'])) {
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-    } else {
-        echo "No record found with ID $id.";
     }
-} else {
-    echo "No ID provided in the URL.";
 };
 ?>
 <!DOCTYPE html>
@@ -23,7 +19,7 @@ if (isset($_GET['id'])) {
 <head>
 <script>
       if (!localStorage.getItem('user_id')) {
-        window.location.href = '../login/index.php';
+        window.location.href = '../src/login/index.php';
       }
     </script>
     <meta charset="UTF-8">
@@ -44,28 +40,28 @@ if (isset($_GET['id'])) {
                 <h2 class="brand_name" style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
-            <a class="side_items_anchor" href="../dashboard/index.php">
+            <a class="side_items_anchor" href="../src/admin/dashboard/index.php">
                 <img src="../assets/home_icon.png" alt="">
                 <p class="side_items">Dashboard</p>
             </a><br>
-            <a class="side_items_anchor" href="../post_blog/index.php">
+            <a class="side_items_anchor" href="../src/admin/post_blog/index.php">
                 <img src="../assets/upload.png" alt="">
                 <p class="side_items">Post</p>
             </a> <br>
-            <a class="side_items_anchor" href="../user_grid/index.php">
+            <a class="side_items_anchor" href="../src/admin/user_grid/index.php">
                 <img src="../assets/user.png" alt="">
                 <p class="side_items">User Grid</p>
             </a><br>
-            <a class="side_items_anchor" href="../construction/index.php">
+            <a class="side_items_anchor" href="../src/admin/construction/index.php">
                 <img src="../assets/tablelist.png" alt="">
                 <p class="side_items">Table List</p>
             </a><br>
 
-            <a class="side_items_anchor" href="../construction/index.php">
+            <a class="side_items_anchor" href="../src/admin/construction/index.php">
                 <img src="../assets/document.png" alt="">
                 <p class="side_items">Document</p>
             </a><br>
-            <a class="side_items_anchor" href="../construction/index.php">
+            <a class="side_items_anchor" href="../src/admin/construction/index.php">
                 <img src="../assets/support.png" alt="">
                 <p class="side_items">Support</p>
             </a><br>

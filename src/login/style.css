@@ -5,9 +5,31 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(87, 140, 236); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3033f0; 
+  }
+  
+  
 body {
     font-family: Arial, sans-serif;
-    background-image: url(../assets/loginback.jpg);
+    background-image: url(../../assets/test.webp);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -30,6 +52,7 @@ nav img {
     float: right;
     display: flex;
     margin: 22px;
+    color: white;
     padding: 10px;
     cursor: pointer;
     border-radius: 20px;

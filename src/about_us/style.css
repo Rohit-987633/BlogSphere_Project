@@ -5,6 +5,30 @@
 
 }
 
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(87, 140, 236); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3033f0; 
+}
+
+
+
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -30,15 +54,17 @@ body {
     text-decoration: none;
     float: right;
     margin: 22px;
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
     border-radius: 20px;
     font-weight: 700;
+    color: white;
   }
   .nav_btn {
     text-decoration: none;
     float: right;
     padding: 10px;
+    margin-top: 2px;
     width: 100px;
     margin-top: 22px;
     cursor: pointer;
@@ -155,6 +181,7 @@ body {
 
 .values-list {
   list-style: none;
+  cursor: pointer;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
@@ -180,7 +207,8 @@ body {
 .values-list li::before {
   content: '\2022';
   font-size: 3rem;
-  color: #ff5722;
+  color:  rgb(2,30,122);;
+  cursor: pointer;
   position: absolute;
   top: 20px;
   left: 20px;
@@ -288,19 +316,22 @@ body {
   margin: 0 auto 30px;
 }
 .join-blogosphere-section .contact-btn {
-  background-color: #222;
-  color: white;
+  background-color: rgb(202, 220, 253);
+  color: black;
+  border: 2px solid rgb(2,30,122);
   padding: 12px 25px;
   font-size: 1rem;
   border-radius: 25px;
-  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .join-blogosphere-section .contact-btn:hover {
-  background-color: #ff5722;
+  cursor: pointer;
+  background-color: rgb(2, 30, 122);
   color: white;
+  transition: 0.3s ease-in;
+
 }
 /* =============== BUTTON =============== */
 
