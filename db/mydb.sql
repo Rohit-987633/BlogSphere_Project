@@ -31,8 +31,7 @@ Create TABLE articles(
     subTitle varchar(100) not null,
     description varchar(200) not null,
     categories varchar(30) not null,
-    image longblob
+    image ARCHAR(255),
+    user_id INT, 
+    FOREIGN KEY (user_id) REFERENCES sign_up(id) ON DELETE CASCADE
 );
-ALTER TABLE articles DROP COLUMN image;
-
-ALTER TABLE articles ADD COLUMN image VARCHAR(255);

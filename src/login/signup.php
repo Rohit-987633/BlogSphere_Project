@@ -1,4 +1,6 @@
-<?php include '../php/signup_process.php'; ?>
+<?php include '../../php/signup_process.php'; 
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,18 +14,18 @@
 
 <body>
     <div class="container">
-        <nav>
-            <img src="../assets/logo.png" alt="">
-            <a href="../login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
-            <a href="../contact/index.php" class="nav_link">Contact</a>
-            <a href="../service/index.php" class="nav_link">Article</a>
-            <a href="../about_us/index.php" class="nav_link">About</a>
-            <a href="../home/index.php" class="nav_link">Home</a>
+    <nav>
+            <img src="../../assets/logo.png" alt="logos">
+            <a href="../../src/login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
+            <a href="../../src/contact/index.php" class="nav_link">Contact</a>
+            <a href="../../src/service/index.php" class="nav_link">Article</a>
+            <a href="../../src/about_us/index.php" class="nav_link">About</a>
+            <a href="../../src/Home/index.php" class="nav_link">Home</a>
         </nav>
     </div>
     <div class="login-container">
         <div class="login-card">
-            <img src="../assets/logo.png" alt="Logo" class="logo">
+            <img src="../../assets/logo.png" alt="Logo" class="logo">
 
             <h2>Sign Up</h2>
 
@@ -56,6 +58,8 @@
                 Already have an account? <a href="index.php">Login</a>
             </p>
         </div>
+       
+
     </div>
 
     <script>
@@ -133,6 +137,18 @@
             return true;
         }
     </script>
+
+<?php
+    session_start();
+    if (isset($_SESSION['message'])) {
+        $msg = addslashes($_SESSION['message']); // prevent JS break
+        echo "<script>
+            alert('$msg');
+            window.location.href = '../login/index.php';
+        </script>";
+        unset($_SESSION['message']);
+    }
+?>
 
 </body>
 

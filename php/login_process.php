@@ -43,14 +43,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user'] = $email;
             $_SESSION['firstname'] = $firstname;
             $_SESSION['lastname'] = $lastname;
+            $_SESSION['en_user_id'] = $encrypted_id;
 
             // Encrypt the user ID
             $encrypted_id = base64_encode($user_id); // Simple encoding as encryption
 
-            // Output the encrypted ID so JavaScript can capture it and store it in localStorage
+            define('ENCRYPTION_KEY', 'A9d7k3L1p0s8Q2v5W6x3Yz1F4h9M7rTc'); // 32 characters
+define('ENCRYPTION_IV', substr(hash('sha256', 'your-iv-seed'), 0, 16));
+define('CIPHER_METHOD', 'AES-256-CBC');
+
+// Sample user ID after login
+$encrypted_id = base64_encode(openssl_encrypt($user_id, CIPHER_METHOD, ENCRYPTION_KEY, 0, ENCRYPTION_IV));
+
+// $encrypted_id = encrypt_id($user_id);
+
+            
             echo "<script>
                     localStorage.setItem('user_id', '$encrypted_id');
-                    window.location = '../dashboard/index.php'; // Redirect to dashboard
+                    window.location = '../../src/admin/dashboard/index.php'; // Redirect to dashboard
                   </script>";
             exit();
         } else {

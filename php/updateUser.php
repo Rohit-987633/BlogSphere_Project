@@ -12,12 +12,27 @@ if( $_SERVER["REQUEST_METHOD"]== "POST") {
     $lastname= $_POST["lastname"];
     $email= $_POST["email"];
     $password= $_POST["password"];
-    $id=1;
+    define('ENCRYPTION_KEY', 'A9d7k3L1p0s8Q2v5W6x3Yz1F4h9M7rTc');
+define('ENCRYPTION_IV', substr(hash('sha256', 'your-iv-seed'), 0, 16));
+define('CIPHER_METHOD', 'AES-256-CBC');
+
+function decrypt_id($encrypted) {
+    return openssl_decrypt(base64_decode($encrypted), CIPHER_METHOD, ENCRYPTION_KEY, 0, ENCRYPTION_IV);
+}
+
+    $encrypted_id =   $_POST["user_id"];    ;
+    $decrypted_id = decrypt_id($encrypted_id);
+
+
+
+$userId=htmlspecialchars($decrypted_id) + 1;
     
+$hashedPassword = hash("sha256", $password);
+
     $sts = $conn->prepare("UPDATE sign_up SET firstname = ?, lastname = ?, email = ?, password = ? WHERE id = ?");
     
 
-    $sts->bind_param("ssssi",$firstname, $lastname, $email, $password, $id);
+    $sts->bind_param("ssssi",$firstname, $lastname, $email, $hashedPassword, $userId);
 //     s = String i= Integer d = Double (float) b = Blob (binary data)
     
 
@@ -33,7 +48,7 @@ if( $_SERVER["REQUEST_METHOD"]== "POST") {
     $sts->close();
     $conn->close();
 
-    header("Location: ../user_grid/index.php");
+    header("Location: ../src/admin/user_grid/index.php");
     exit();
 }
 

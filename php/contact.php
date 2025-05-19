@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         
         $_SESSION['message'] = "Message send Successfully!";
-        header("Location: ../contact/index.php");
+        header("Location: ../src/contact/index.php");
         exit();
     } else {
         echo "Database error: " . $stmt->error;

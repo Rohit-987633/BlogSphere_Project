@@ -20,6 +20,7 @@ session_start();
             margin: 22px;
             padding: 10px;
             cursor: pointer;
+            color: white;
             border-radius: 20px;
             font-weight: 700;
         }
@@ -58,7 +59,9 @@ session_start();
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background-image:url('../../assets//test.webp') ;
+            background-repeat: no-repeat;
+            background-size: cover;
             height: 100vh;
 
         }
@@ -120,7 +123,8 @@ session_start();
         }
 
         .form-section button:hover {
-            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            background: linear-gradient(90deg,rgb(47, 108, 214),rgb(154, 84, 230));
+            transition: 0.5s ease-in-out;
         }
 
         .info-section {
@@ -162,14 +166,13 @@ session_start();
 <body>
 
     <div class="container_inside">
-
-        <nav>
-            <img src="../assets/logo.png" alt="">
-            <a href="../login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
-            <a href="../contact/index.php" class="nav_link">Contact</a>
-            <a href="../service/index.php" class="nav_link">Article</a>
-            <a href="../about_us/index.php" class="nav_link act_nav_link" style="color:black">About</a>
-            <a href="../Home/index.php" class="nav_link">Home</a>
+    <nav>
+            <img src="../../assets/logo.png" alt="logos">
+            <a href="../../src/login/index.php"> <button class="nav_btn"><b>Login</b></button></a>
+            <a href="../../src/contact/index.php" class="nav_link">Contact</a>
+            <a href="../../src/service/index.php" class="nav_link">Article</a>
+            <a href="../../src/about_us/index.php" class="nav_link">About</a>
+            <a href="../../src/Home/index.php" class="nav_link">Home</a>
         </nav>
 
     </div>
@@ -183,7 +186,7 @@ session_start();
                 <h2>Let's Talk</h2>
                 <p>To request a quote or meet up for coffee, fill out the form and we'll get back to you promptly.</p>
 
-                <form action="../php/contact.php" method="post">
+                <form action="../../php/contact.php " method="post">
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" rows="4" placeholder="Type your message here..." required></textarea>
@@ -197,9 +200,9 @@ session_start();
                 <p>+61 (02) 6112 8839</p>
                 <p>contact@blogsphere.com</p>
                 <div class="social-icons">
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.twitter.com"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></a>
                 </div>
             </div>
             <?php
