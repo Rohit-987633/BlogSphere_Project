@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 1443px) {
+  .logo_img{
+    margin: auto;
+  }
+  
+  .brand_name {
+      display: none;
+  }
+}
+
+@media (max-width: 1181px) {
+  .brand_name {
+      display: none;
+  }
+  .side_items_anchor{
+    display: flex;
+    justify-content: center;
+  }
+
+  .side_items {
+      display: none;
+  }
+}
+.dashboard {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.dashboard_sidebar {
+    background-image: url("../../../assets/purple.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  width: 13%;
+  height: 100vh;
+}
+.dashboard_sidebar img {
+  width: 60px;
+  border-radius: 50px;
+}
+
+.side_items {
+  padding: 20px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.side_items_anchor:hover {
+  background-color: rgb(80, 135, 238) !important;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.center_content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100vh;
+}
+
+.side_items_anchor img {
+  border-radius: 10px;
+  width: 24px;
+    height: 24px;
+  margin: 20px 0 0 20px;
+}
+.topbar {
+  padding-top: 30px;
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  float: right;
+}
+
+.topbar h3 {
+  margin-left: 20px;
+}
+.content {
+  background-color: rgb(237, 243, 241);
+  flex: 1;
+  overflow-y: auto;
+  padding: 0PX 0PX 50PX 0PX;
+}
+.submission_form {
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  margin: auto;
+  padding: 30px;
+  border-style: dotted;
+  width: 90%;
+  position: relative;
+  top: 15%;
+}
+.submission_form2 {
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  margin: auto;
+  /* padding: 30px; */
+  border-style: dotted;
+  width: fit-content;
+  position: relative;
+  top: 15%;
+}
+.post_table td {
+  padding: 10px;
+}
+.post_table input {
+  padding: 5px;
+}
+
+.post_table button {
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid rgb(78, 28, 214);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(78, 28, 214);
+  transition: all 0.5s ease;
+}
+
+.post_table button:hover {
+  background: linear-gradient(135deg, rgb(121, 82, 228), rgb(180, 150, 255));
+  color: white;
+  box-shadow: 0 0 10px rgba(121, 82, 228, 0.6);
+  border-color: rgb(121, 82, 228);
+}
+
+.side_item_list {
+  display: flex;
+}
+.side_items_anchor {
+  text-decoration: none;
+  color: black;
+  display: flex;
+}
+.topbar img {
+  width: 50px;
+}
+.topbar_info {
+  display: flex;
+  justify-content: right;
+  justify-items: right;
+  align-items: right;
+
+  position: absolute;
+  right: 1%;
+  top: 20px;
+}
+.user_logo {
+  width: 40px !important;
+  height: 10% !important ;
+  margin-top: 4px;
+}
+.topbar_info p {
+  margin-top: 10%;
+  margin-left: 10px;
+}
+.logout_btn {
+  margin-left: 20px;
+  width: 25px !important;
+  height: 25px;
+  margin-top: 14px;
+  cursor: pointer;
+}
+.user_table th{
+  border:1px solid black;
+  padding: 10px;
+  background-image: url("../../../assets/purple.png");
+}
+.user_table td{
+  border:  1px solid black;
+  padding:10px;
+  text-align: center;
+}
+.user_table{
+  border-collapse:collapse;
+}
+.del{
+  width: 20px;
+  cursor: pointer;
+  height: 10%;
+  float: left;
+}
+.del2{
+  width: 20px;
+  cursor: pointer;
+  height: 10%;
+float: right;
+}
+tr:nth-child(odd) {
+  background-color: rgb(227, 229, 235);
+}
+.edit_table tr:nth-child(odd){
+background-color: rgb(237, 243, 241)!important;
+}

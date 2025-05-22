@@ -6,7 +6,6 @@ if (isset($_SESSION['user'])) {
     $email = $_SESSION['user'];
     $firstname = $_SESSION['firstname'];
     $lastname = $_SESSION['lastname'];
-    
 }
 
 ?>
@@ -15,10 +14,41 @@ if (isset($_SESSION['user'])) {
 
 <head>
     <script>
-        if (!localStorage.getItem('user_id')) {
+        if (!localStorage.getItem('user_id') && !localStorage.getItem('super_user_id')) {
             window.location.href = '../../login/index.php';
         }
-    </script>
+    
+  document.addEventListener('DOMContentLoaded', function () {
+    const logoutLink = document.getElementById('logoutLink');
+
+    if (logoutLink) {
+      logoutLink.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (confirm('Are you sure you want to logout?')) {
+          localStorage.clear();
+          window.location.href = this.href;
+        }
+      });
+    }
+
+    const superUserId = localStorage.getItem("super_user_id");
+    const element = document.getElementsByClassName("custom_tag")[0];
+    const element2 = document.getElementsByClassName("user_grid")[0];
+
+    if (element && element2) {
+      if (superUserId) {
+        console.log(":::::");
+        element.style.display = "flex";
+        element2.style.display = "none";
+      } else {
+        element.style.display = "none";
+        element2.style.display = "flex";
+      }
+    } else {
+      console.warn("custom_tag or user_grid element not found.");
+    }
+  });
+</script>
 
 
     <meta charset="UTF-8">
@@ -39,34 +69,35 @@ if (isset($_SESSION['user'])) {
                 <h2 class="brand_name" style="margin-top:10px;">BlogSphere</h2>
                 <br>
             </div>
-            <!-- <div class="side_item_list"> <img src="../assets//adminlogo.png" alt="">
-                <p class="side_items">Rohit Singh</p>   
-            </div> -->
             <a class="side_items_anchor" href="../dashboard/index.php">
                 <img src="../../../assets/home_icon.png" alt="">
                 <p class="side_items">Dashboard</p>
-            </a><br>
+            </a>
             <a class="side_items_anchor" href="../post_blog/index.php">
                 <img src="../../../assets/upload.png" alt="">
                 <p class="side_items">Post</p>
-            </a> <br>
-            <a class="side_items_anchor" href="../user_grid/index.php">
+            </a>
+            <a class="side_items_anchor user_grid" href="../user_grid/index.php" id="user_grid">
                 <img src="../../../assets/user.png" alt="">
                 <p class="side_items">User Grid</p>
-            </a><br>
+            </a>
+            <a class="side_items_anchor custom_tag" id="custom_tag" href="../../superuser/user_management/index.php">
+                <img src="../../../assets/user.png" alt="">
+                <p class="side_items">User Manage</p>
+            </a>
             <a class="side_items_anchor" href="../construction/index.php">
                 <img src="../../../assets/tablelist.png" alt="">
                 <p class="side_items">Table List</p>
-            </a><br>
+            </a>
 
             <a class="side_items_anchor" href="../construction/index.php">
                 <img src="../../../assets/document.png" alt="">
                 <p class="side_items">Document</p>
-            </a><br>
+            </a>
             <a class="side_items_anchor" href="../construction/index.php">
                 <img src="../../../assets/support.png" alt="">
                 <p class="side_items">Support</p>
-            </a><br>
+            </a>
 
 
 
@@ -75,10 +106,22 @@ if (isset($_SESSION['user'])) {
         <div class="center_content">
 
             <div class="topbar">
-                <h3>Admin Dashboard</h3>
+                <h3 id="dashboardTitle"></h3>
+
+                <script>
+                    document.getElementById("dashboardTitle").textContent =
+                        localStorage.getItem("super_user_id") ? "Super Admin Dashboard" :
+                        localStorage.getItem("user_id") ? "Admin Dashboard" : "Dashboard";
+                </script>
                 <div class="topbar_info">
                     <img class="user_logo" src="../../../assets//adminlogo.png" alt="" style="border-radius: 50%;background-color:gray !important">
-                    <p style="font-size:larger !important;"><?php echo $firstname ?></p>
+                    <p id="firstname" style="font-size:larger !important;"></p>
+
+                    <script>
+                        document.getElementById("firstname").textContent =
+                            localStorage.getItem("super_user_id") ? "Super" :
+                            localStorage.getItem("user_id") ? "<?php echo $firstname ?>" : "Dashboard";
+                    </script>
 
                     <a href="../../../php/logout.php" id="logoutLink">
                         <img src="../../../assets//back.png" alt="" class="logout_btn"></a>
@@ -219,7 +262,6 @@ if (isset($_SESSION['user'])) {
                     <h2>Articles</h2>
                 </div>
 
-
                 <!-- <div class="chart_content">
                     <div class="image_content_dashboard">
                         <table style="width:100%" class="user_table">
@@ -246,6 +288,7 @@ if (isset($_SESSION['user'])) {
                                 $result = $conn->query($sql);
 
                                 if ($result->num_rows > 0) {
+                                    
                                     while ($row = $result->fetch_assoc()) {
                                         // Debug: Output the image URL
                                         echo "<tr>
@@ -261,17 +304,17 @@ if (isset($_SESSION['user'])) {
                                                     <a href='../../../php/deleteUser.php?id=" . $row['id'] . "' onclick=\"return confirm('Are you sure you want to delete this record?');\">
                                                         <img src='../../../assets/del.png' alt='Delete' class='del'>
                                                     </a>
-                                                    <a href='./../../../superuser/editUser.php?id=" . $row['id'] . "'>
+                                                    <a href='../dashboard/editadminarticle.php?id=" . $row['id'] . "'>
                                                         <img src='../../../assets/edit.png' alt='Edit' class='del2'>
                                                     </a>
                                                 </td>
                                                     </tr>";
-                                                                }
-                                                            }
-                                                        } else {
-                                                            echo "<tr><td colspan='7'>No records found.</td></tr>";
-                                                        }
-                                                        ?>
+                                    }
+                                }
+                            } else {
+                                echo "<tr><td colspan='7'>No records found.</td></tr>";
+                            }
+                            ?>
 
 
 
@@ -297,36 +340,48 @@ if (isset($_SESSION['user'])) {
                                 <th style="width: 7%;">Action</th>
                             </tr>
                             <?php
-                            $sql = "SELECT id, mainTitle, subTitle, description, categories, image2 FROM articles where user_id=$user_id";
+// Ensure these are set
+if (isset($firstname, $lastname, $email)) {
+    $user_sql = "SELECT id FROM sign_up WHERE firstname='$firstname' AND lastname='$lastname' AND email='$email'";
+    $user_result = $conn->query($user_sql);
 
-                            $result = $conn->query($sql);
+    if ($user_result && $user_result->num_rows > 0) {
+        $user_row = $user_result->fetch_assoc();
+        $user_id = $user_row['id'];
 
-                            if ($result->num_rows > 0) {
-                                while ($row = $result->fetch_assoc()) {
-                                    // Debug: Output the image URL
-                                    echo "<tr>
-                                <td>" . $row['id'] . "</td>
-                                <td>" . htmlspecialchars($row['mainTitle']) . "</td>
-                                <td>" . htmlspecialchars($row['subTitle']) . "</td>
-                                <td>" . htmlspecialchars($row['description']) . "</td>
-                                <td>" . htmlspecialchars($row['categories']) . "</td>
-                                <td>
-                                    <img class='table_article_images' src='" . htmlspecialchars($row['image2']) . "' />
-                                </td>
-                                <td>
-                                    <a href='../../../php/deleteArticle.php?id=" . $row['id'] . "' onclick=\"return confirm('Are you sure you want to delete this record?');\">
-                                        <img src='../../../assets/del.png' alt='Delete' class='del'>
-                                    </a>
-                                    <a href='../dashboard/editadminarticle.php?id=" . $row['id'] . "'>
-                                        <img src='../../../assets/edit.png' alt='Edit' class='del2'>
-                                    </a>
-                                </td>
-                            </tr>";
-                                }
-                            } else {
-                                echo "<tr><td colspan='7'>No records found.</td></tr>";
-                            }
-                            ?>
+        $sql = "SELECT id, mainTitle, subTitle, description, categories, image2 FROM articles WHERE user_id = $user_id";
+        $result = $conn->query($sql);
+
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>
+                        <td>" . $row['id'] . "</td>
+                        <td>" . htmlspecialchars($row['mainTitle']) . "</td>
+                        <td>" . htmlspecialchars($row['subTitle']) . "</td>
+                        <td>" . htmlspecialchars($row['description']) . "</td>
+                        <td>" . htmlspecialchars($row['categories']) . "</td>
+                        <td><img class='table_article_images' src='" . htmlspecialchars($row['image2']) . "' /></td>
+                        <td>
+                            <a href='../../../php/deleteUser.php?id=" . $row['id'] . "' onclick=\"return confirm('Are you sure you want to delete this record?');\">
+                                <img src='../../../assets/del.png' alt='Delete' class='del'>
+                            </a>
+                            <a href='../dashboard/editadminarticle.php?id=" . $row['id'] . "'>
+                                <img src='../../../assets/edit.png' alt='Edit' class='del2'>
+                            </a>
+                        </td>
+                    </tr>";
+            }
+        } else {
+            echo "<tr><td colspan='7'>No articles found for this user.</td></tr>";
+        }
+    } else {
+        echo "<tr><td colspan='7'>No Record Found.</td></tr>";
+    }
+} else {
+    echo "<tr><td colspan='7'>No Record Found.</td></tr>";
+}
+?>
+
 
 
 
@@ -344,23 +399,39 @@ if (isset($_SESSION['user'])) {
             </div>
         </div>
     </div>
-    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const logoutLink = document.getElementById('logoutLink');
 
-            if (logoutLink) {
-                logoutLink.addEventListener('click', function(event) {
-                    event.preventDefault(); // Stop the default navigation
-                    if (confirm('Are you sure you want to logout?')) {
-                        localStorage.clear(); // Clear all localStorage
-                        window.location.href = this.href; // Then redirect
-                    }
-                });
-            }
-        });
-    </script>
+
+<!-- <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+    const logoutLink = document.getElementById('logoutLink');
+
+    if (logoutLink) {
+      logoutLink.addEventListener('click', function (event) {
+        event.preventDefault(); // Stop the default navigation
+        if (confirm('Are you sure you want to logout?')) {
+          localStorage.clear(); // Clear all localStorage
+          window.location.href = this.href; // Then redirect
+        }
+      });
+    }
+  });
+     const superUserId = localStorage.getItem("super_user_id");
+        const element = document.getElementsByClassName("custom_tag")[0];
+        const element2 = document.getElementsByClassName("user_grid")[0];
+        if (superUserId) {
+            console.log(":::::");
+            
+            element.style.display = "flex";
+            element2.style.display = "none";
+        } else {
+            element.style.display = "none";
+            element2.style.display = "flex";
+        }
+</script> -->
+
+
 
 </body>
 

@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
     $sql = "DELETE FROM sign_up WHERE id = $id";
     if ($conn->query($sql) === TRUE) {
-        header("Location:../superuser/index.php"); // redirect back to the table page
+        header("Location:../src/superuser/user_management/index.php");
         exit();
     } else {
         echo "Error deleting record: " . $conn->error;
