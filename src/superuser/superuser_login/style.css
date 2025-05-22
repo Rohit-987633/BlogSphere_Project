@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(87, 140, 236); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3033f0; 
+  }
+  
+  
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../../../assets/test.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    overflow: auto; 
+}
+.container {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+/* ///////////////////////////////////////////NAVBAR/////////////////////////////////////////// */
+nav {
+    justify-content: space-between;
+}
+nav img {
+    width: 80px;
+    height: 80px;  
+}
+.nav_link {
+    text-decoration: none;
+    float: right;
+    display: flex;
+    margin: 22px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 700;
+}
+.nav_btn {
+    text-decoration: none;
+    background-color: white;
+    color:black;
+    float: right; 
+    padding: 13px;
+    width: 100px;
+    margin-top: 22px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.nav_btn:hover {
+    background-color: rgb(2, 30, 122);
+    transition: 0.3s ease-in-out;
+    border: 2px solid white;
+    color: white;
+ }
+.nav_link:hover {
+    background-color: rgb(2, 30, 122);
+    color: white;
+    transition: 0.3s ease-in-out;
+    border-radius: 20px;
+}
+/* ///////////////////////////////////////////NAVBAR/////////////////////////////////////////// */
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.644); 
+    /* background-color: rgb(230, 233, 235); */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 80px; 
+    height: 80px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="email"], input[type="username"], input[type="password"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-link a {
+    color: #333;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 14px;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}

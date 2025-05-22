@@ -1,5 +1,4 @@
 <?php include '../../php/signup_process.php'; 
-session_start();
 ?>
 
 <!DOCTYPE html>
@@ -40,11 +39,27 @@ session_start();
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <div style="position: relative;">
+  <input type="password" id="password" name="password" placeholder="Enter your password" required 
+         style="padding-right: 30px;">
+
+  <img src="../../assets/hide.png" id="togglePassword" alt="Toggle Password" 
+       style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 28px; cursor: pointer;">
+</div>
+
 
                 <label for="confirm_password">Confirm Password</label>
-                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password"
-                    required>
+                
+                <div style="position: relative;">
+  <input type="password" id="confirm_password" name="confirm_password" placeholder="Enter your confirm password" required 
+         style="padding-right: 30px;">
+
+  <img src="../../assets/hide.png" id="confirmtogglePassword" alt="Toggle confirm Password" 
+       style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 28px; cursor: pointer;">
+</div>
+
+                
 
                 <button type="submit" class="signup-btn">Sign Up</button>
             </form>
@@ -136,6 +151,27 @@ session_start();
 
             return true;
         }
+
+        const passwordInput = document.getElementById("password");
+  const toggleIcon = document.getElementById("togglePassword");
+
+  toggleIcon.addEventListener("click", () => {
+    const isPassword = passwordInput.type === "password";
+    passwordInput.type = isPassword ? "text" : "password";
+    toggleIcon.src = isPassword ? "../../assets/show.webp" : "../../assets/hide.png";
+  });
+
+
+    const passwordInput2 = document.getElementById("confirm_password");
+  const toggleIcon2 = document.getElementById("confirmtogglePassword");
+
+  toggleIcon2.addEventListener("click", () => {
+    const isPassword = passwordInput2.type === "password";
+    passwordInput2.type = isPassword ? "text" : "password";
+    toggleIcon2.src = isPassword ? "../../assets/show.webp" : "../../assets/hide.png";
+  });
+
+
     </script>
 
 <?php

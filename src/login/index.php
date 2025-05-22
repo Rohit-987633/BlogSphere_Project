@@ -34,7 +34,17 @@
                 <input type="text" id="email" name="email" placeholder="Enter your username" required>
 
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <div style="position: relative;">
+  <input type="password" id="password" name="password" placeholder="Enter your password" required 
+         style="padding-right: 30px;">
+
+  <img src="../../assets/hide.png" id="togglePassword" alt="Toggle Password" 
+       style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 28px; cursor: pointer;">
+</div>
+
+
+
 
                 <button type="submit" class="login-btn">Login</button>
             </form>
@@ -43,7 +53,7 @@
             <?php if (!empty($message)): ?>
                 <p style="color:red;"><?php echo $message; ?></p>
             <?php endif; ?>
-
+<p>Login as <a href="../superuser/superuser_login/index.php" style="text-decoration: none;">SuperAdmin </a> 🦸‍♂️ </p>
             <p class="signup-link">
                 Don't have an account? <a href="./signup.php">Sign Up</a>
             </p>
@@ -92,6 +102,19 @@
 
             return true;
         }
+
+            
+  const passwordInput = document.getElementById("password");
+  const toggleIcon = document.getElementById("togglePassword");
+
+  toggleIcon.addEventListener("click", () => {
+    const isPassword = passwordInput.type === "password";
+    passwordInput.type = isPassword ? "text" : "password";
+    toggleIcon.src = isPassword ? "../../assets/show.webp" : "../../assets/hide.png";
+  });
+
+
+
     </script>
 </body>
 
